@@ -13,12 +13,14 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-surge": "^0.1.0",
     "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
     "what-input": "^5.0.5"
   },
   "scripts": {
+    "stage": "gulp stage",
     "start": "gulp"
   }
 }

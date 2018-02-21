@@ -9,6 +9,7 @@ const plumber = require('gulp-plumber')
 const rename = require('gulp-rename')
 const sass = require('gulp-sass')
 const sourcemaps = require('gulp-sourcemaps')
+const surge = require('gulp-surge')
 const uglify = require('gulp-uglify')
 
 gulp.task('browser-sync', () =>
@@ -41,6 +42,13 @@ gulp.task('scripts', () =>
     .pipe(sourcemaps.write(''))
     .pipe(gulp.dest('dest/scripts'))
     .on('end', browserSync.reload)
+)
+
+gulp.task('stage', () =>
+  surge({
+    project: 'dest',
+    domain: 'qantas-osaka-interactive.surge.sh'
+  })
 )
 
 gulp.task('stylesheets', () =>
