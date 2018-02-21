@@ -3,6 +3,7 @@ const browserSync = require('browser-sync')
 const concat = require('gulp-concat')
 const gulp = require('gulp')
 const htmlmin = require('gulp-htmlmin')
+const imagemin = require('gulp-imagemin')
 const nunjucks = require('gulp-nunjucks')
 const plumber = require('gulp-plumber')
 const rename = require('gulp-rename')
@@ -19,7 +20,14 @@ gulp.task('browser-sync', () =>
   })
 )
 
-gulp.task('default', ['scripts', 'stylesheets', 'templates', 'watch'])
+gulp.task('default', ['images', 'scripts', 'stylesheets', 'templates', 'watch'])
+
+gulp.task('images', () =>
+  gulp.src('src/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dest/images'))
+    .on('end', browserSync.reload)
+)
 
 gulp.task('scripts', () =>
   gulp.src([
@@ -67,6 +75,7 @@ gulp.task('templates', () =>
 )
 
 gulp.task('watch', ['browser-sync'], () => {
+  gulp.watch('src/images/*', ['images'])
   gulp.watch('src/scripts/**/*.js', ['scripts'])
   gulp.watch('src/stylesheets/**/*.scss', ['stylesheets'])
   gulp.watch('src/templates/**/*.njk', ['templates'])
