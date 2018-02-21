@@ -1,9 +1,12 @@
+const autoprefixer = require('gulp-autoprefixer')
 const browserSync = require('browser-sync')
 const gulp = require('gulp')
 const htmlmin = require('gulp-htmlmin')
 const nunjucks = require('gulp-nunjucks')
 const plumber = require('gulp-plumber')
 const rename = require('gulp-rename')
+const sass = require('gulp-sass')
+const sourcemaps = require('gulp-sourcemaps')
 
 gulp.task('browser-sync', () =>
   browserSync.init({
@@ -14,7 +17,23 @@ gulp.task('browser-sync', () =>
   })
 )
 
-gulp.task('default', ['templates', 'watch'])
+gulp.task('default', ['stylesheets', 'templates', 'watch'])
+
+gulp.task('stylesheets', () =>
+  gulp.src('src/stylesheets/*.scss')
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+      .pipe(sass({
+        outputStyle: 'compressed',
+        precision: 10
+      }))
+      .pipe(autoprefixer())
+    .pipe(sourcemaps.write(''))
+    .pipe(gulp.dest('dest/stylesheets'))
+    .pipe(browserSync.stream({
+      match: '**/*.css'
+    }))
+)
 
 gulp.task('templates', () =>
   gulp.src('src/templates/*.njk')
@@ -32,5 +51,6 @@ gulp.task('templates', () =>
 )
 
 gulp.task('watch', ['browser-sync'], () => {
+  gulp.watch('src/stylesheets/**/*.scss', ['stylesheets'])
   gulp.watch('src/templates/**/*.njk', ['templates'])
 })
