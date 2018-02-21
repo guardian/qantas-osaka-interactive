@@ -1,5 +1,6 @@
 const autoprefixer = require('gulp-autoprefixer')
 const browserSync = require('browser-sync')
+const concat = require('gulp-concat')
 const gulp = require('gulp')
 const htmlmin = require('gulp-htmlmin')
 const nunjucks = require('gulp-nunjucks')
@@ -7,6 +8,7 @@ const plumber = require('gulp-plumber')
 const rename = require('gulp-rename')
 const sass = require('gulp-sass')
 const sourcemaps = require('gulp-sourcemaps')
+const uglify = require('gulp-uglify')
 
 gulp.task('browser-sync', () =>
   browserSync.init({
@@ -17,7 +19,21 @@ gulp.task('browser-sync', () =>
   })
 )
 
-gulp.task('default', ['stylesheets', 'templates', 'watch'])
+gulp.task('default', ['scripts', 'stylesheets', 'templates', 'watch'])
+
+gulp.task('scripts', () =>
+  gulp.src([
+    'node_modules/what-input/dist/what-input.js',
+    'src/scripts/*.js'
+  ])
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+      .pipe(concat('index.js'))
+      .pipe(uglify())
+    .pipe(sourcemaps.write(''))
+    .pipe(gulp.dest('dest/scripts'))
+    .on('end', browserSync.reload)
+)
 
 gulp.task('stylesheets', () =>
   gulp.src('src/stylesheets/*.scss')
@@ -51,6 +67,7 @@ gulp.task('templates', () =>
 )
 
 gulp.task('watch', ['browser-sync'], () => {
+  gulp.watch('src/scripts/**/*.js', ['scripts'])
   gulp.watch('src/stylesheets/**/*.scss', ['stylesheets'])
   gulp.watch('src/templates/**/*.njk', ['templates'])
 })
