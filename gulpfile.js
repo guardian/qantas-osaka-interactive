@@ -12,28 +12,25 @@ const runSequence = require('run-sequence')
 const sass = require('gulp-sass')
 const sourcemaps = require('gulp-sourcemaps')
 const surge = require('gulp-surge')
+const svgo = require('gulp-svgo')
+const svgstore = require('gulp-svgstore')
 const uglify = require('gulp-uglify')
 
-gulp.task('browser-sync', () =>
-  browserSync.init({
-    server: {
-      baseDir: 'dest',
-      directory: true
-    }
-  })
+
+// File tasks --------------------------
+
+gulp.task('icons', () =>
+  gulp.src('src/icons/*.svg')
+    .pipe(rename({
+      prefix: 'icon-'
+    }))
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(gulp.dest('dest/images'))
+    .on('end', browserSync.reload)
 )
-
-gulp.task('build', () =>
-  runSequence('build:clean', 'build:files')
-)
-
-gulp.task('build:clean', () =>
-  del('dest')
-)
-
-gulp.task('build:files', ['images', 'scripts', 'stylesheets', 'templates'])
-
-gulp.task('default', ['build', 'watch'])
 
 gulp.task('images', () =>
   gulp.src('src/images/*')
@@ -54,13 +51,6 @@ gulp.task('scripts', () =>
     .pipe(sourcemaps.write(''))
     .pipe(gulp.dest('dest/scripts'))
     .on('end', browserSync.reload)
-)
-
-gulp.task('stage', ['build'], () =>
-  surge({
-    project: 'dest',
-    domain: 'qantas-osaka-interactive.surge.sh'
-  })
 )
 
 gulp.task('stylesheets', () =>
@@ -94,9 +84,50 @@ gulp.task('templates', () =>
     .on('end', browserSync.reload)
 )
 
+
+// Development tasks -------------------
+
+gulp.task('browser-sync', () =>
+  browserSync.init({
+    server: {
+      baseDir: 'dest',
+      directory: true
+    }
+  })
+)
+
 gulp.task('watch', ['browser-sync'], () => {
+  gulp.watch('src/icons/*.svg', ['icons'])
   gulp.watch('src/images/*', ['images'])
-  gulp.watch('src/scripts/**/*.js', ['scripts'])
+  gulp.watch('src/scripts/*.js', ['scripts'])
   gulp.watch('src/stylesheets/**/*.scss', ['stylesheets'])
   gulp.watch('src/templates/**/*.njk', ['templates'])
 })
+
+
+// Build tasks -------------------------
+
+gulp.task('build', () =>
+  runSequence('build:clean', 'build:files')
+)
+
+gulp.task('build:clean', () =>
+  del('dest')
+)
+
+gulp.task('build:files', ['icons', 'images', 'scripts', 'stylesheets', 'templates'])
+
+
+// Deploy tasks ------------------------
+
+gulp.task('stage', ['build'], () =>
+  surge({
+    project: 'dest',
+    domain: 'qantas-osaka-interactive.surge.sh'
+  })
+)
+
+
+// Default tasks -----------------------
+
+gulp.task('default', ['build', 'watch'])
