@@ -1,12 +1,14 @@
 const autoprefixer = require('gulp-autoprefixer')
 const browserSync = require('browser-sync')
 const concat = require('gulp-concat')
+const del = require('del')
 const gulp = require('gulp')
 const htmlmin = require('gulp-htmlmin')
 const imagemin = require('gulp-imagemin')
 const nunjucks = require('gulp-nunjucks')
 const plumber = require('gulp-plumber')
 const rename = require('gulp-rename')
+const runSequence = require('run-sequence')
 const sass = require('gulp-sass')
 const sourcemaps = require('gulp-sourcemaps')
 const surge = require('gulp-surge')
@@ -21,7 +23,17 @@ gulp.task('browser-sync', () =>
   })
 )
 
-gulp.task('default', ['images', 'scripts', 'stylesheets', 'templates', 'watch'])
+gulp.task('build', () =>
+  runSequence('build:clean', 'build:files')
+)
+
+gulp.task('build:clean', () =>
+  del('dest')
+)
+
+gulp.task('build:files', ['images', 'scripts', 'stylesheets', 'templates'])
+
+gulp.task('default', ['build', 'watch'])
 
 gulp.task('images', () =>
   gulp.src('src/images/*')
@@ -44,7 +56,7 @@ gulp.task('scripts', () =>
     .on('end', browserSync.reload)
 )
 
-gulp.task('stage', () =>
+gulp.task('stage', ['build'], () =>
   surge({
     project: 'dest',
     domain: 'qantas-osaka-interactive.surge.sh'
