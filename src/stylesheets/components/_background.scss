@@ -1,0 +1,33 @@
+.c-background {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  &::after {
+    content: "";
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.c-background--call-to-action::after {
+  background-color: rgba($lifeguard, 0.5);
+}
+
+.c-background--header::after {
+  background-image: linear-gradient(rgba($black, 0),rgba($black, 0.75));
+}
+
+.c-background__image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}

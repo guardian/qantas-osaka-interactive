@@ -1,0 +1,35 @@
+.c-share {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-share__label {
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+
+.c-share-menu {
+  display: flex;
+}
+
+.c-share-menu__item:not(:last-child) {
+  margin-right: 0.5em;
+}
+
+.c-share-menu__link {
+  background-color: $white;
+  border-radius: 50%;
+  color: $tundora;
+  display: block;
+  line-height: 1;
+  padding: 0.25em;
+
+  &:hover {
+    background-color: $lifeguard;
+    color: $white;
+  }
+}
+
+.c-share-menu__icon {
+  font-size: 2em;
+}

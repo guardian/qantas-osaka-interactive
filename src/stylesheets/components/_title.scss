@@ -1,0 +1,13 @@
+.c-title {
+  @include fluid-type(font-size, 20em, 48em, 1.5em, 2em);
+  font-family: "GH Guardian Headline", serif;
+  line-height: 1.125;
+}
+
+.c-title--large {
+  @include fluid-type(font-size, 20em, 48em, 1.5em, 3em);
+}
+
+.c-title--sans-serif {
+  font-family: "TS3 Text Sans", sans-serif;
+}

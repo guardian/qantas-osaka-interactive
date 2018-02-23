@@ -1,0 +1,46 @@
+@font-face {
+  font-display: swap;
+  font-family: "TS3 Text Sans";
+  src: url("/fonts/TS3TextSans.woff2") format("woff2"),
+       url("/fonts/TS3TextSans.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "TS3 Text Sans";
+  font-style: italic;
+  src: url("/fonts/TS3TextSans-Italic.woff2") format("woff2"),
+       url("/fonts/TS3TextSans-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "TS3 Text Sans";
+  font-weight: bold;
+  src: url("/fonts/TS3TextSans-Bold.woff2") format("woff2"),
+       url("/fonts/TS3TextSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "TS3 Text Sans";
+  font-style: italic;
+  font-weight: bold;
+  src: url("/fonts/TS3TextSans-BoldItalic.woff2") format("woff2"),
+       url("/fonts/TS3TextSans-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "GH Guardian Headline";
+  src: url("/fonts/GHGuardianHeadline.woff2") format("woff2"),
+       url("/fonts/GHGuardianHeadline.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "GH Guardian Headline";
+  font-weight: bold;
+  src: url("/fonts/GHGuardianHeadline-Bold.woff2") format("woff2"),
+       url("/fonts/GHGuardianHeadline-Bold.woff") format("woff");
+}
