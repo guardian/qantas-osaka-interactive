@@ -26,7 +26,14 @@
   background-image: linear-gradient(rgba($black, 0),rgba($black, 0.75));
 }
 
+@keyframes scale {
+  100% {
+    transform: scale(1.125);
+  }
+}
+
 .c-background__image {
+  animation: 10s ease-in-out infinite alternate scale;
   height: 100%;
   object-fit: cover;
   width: 100%;
