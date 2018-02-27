@@ -5,3 +5,10 @@
   padding-bottom: 2em;
   padding-top: 2em;
 }
+
+.c-footer__container {
+  @media (min-width: 48em) {
+    margin-bottom: -2em;
+    position: relative;
+  }
+}

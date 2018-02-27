@@ -1,4 +1,6 @@
 .s-entry-content {
+  line-height: 1.75;
+
   h3,
   p {
     margin-bottom: 1.5em;
@@ -20,6 +22,11 @@
 
 .s-entry-content--large {
   font-size: 1.25em;
+}
+
+.s-entry-content--lead {
+  color: $lifeguard;
+  font-style: italic;
 }
 
 .s-entry-content--narrow {

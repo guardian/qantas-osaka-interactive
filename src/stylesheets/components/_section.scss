@@ -13,3 +13,36 @@
 .c-section--padding {
   @include fluid-type(padding-bottom padding-top, 20em, 48em, 2em, 4em);
 }
+
+
+// Background --------------------------
+
+.c-main .c-section {
+  background-repeat: no-repeat;
+
+  &:nth-child(1) {
+    background-image: url(/images/background-1.png);
+    background-position: 12.5% 100%;
+  }
+
+  &:nth-child(2) {
+    background-image: url(/images/background-2.png);
+    background-position: 87.5% 100%;
+  }
+
+  &:nth-child(3) {
+    background-image: url(/images/background-3.png), url(/images/background-4.png);
+    background-position: 6.25% 100%, 93.75% 50%;
+  }
+
+  &:nth-child(6) {
+    background-image: url(/images/background-5.png), url(/images/background-6.png);
+    background-position: 6.25% 0, 93.75% 100%;
+  }
+
+  &:nth-child(n) {
+    @media (max-width: 79.9375em) {
+      background-image: none;
+    }
+  }
+}

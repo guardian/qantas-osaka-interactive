@@ -1,0 +1,21 @@
+.c-paid-for-by {
+  text-align: center;
+
+  @media (min-width: 48em) {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.c-paid-for-by__label {
+  font-size: 0.625em;
+}
+
+.c-paid-for-by__link {
+  display: block;
+}
+
+.c-paid-for-by__image {
+  width: 7em;
+}

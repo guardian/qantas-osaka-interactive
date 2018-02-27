@@ -1,28 +1,26 @@
 <footer class="c-section c-section--padding c-footer">
 
-  <div class="o-container">
+  <div class="o-container c-footer__container">
 
-    <div class="u-vertical-space">
-
-      <a class="c-button c-button--footer" href="#">Konnichiwa Osaka</a>
-      <!-- /c-button -->
-
+    <div class="c-series">
+      <p class="c-series__label">Read more from our content series:</p>
+      <a class="c-button c-button--footer c-series__button" href="#">Konnichiwa Osaka</a>
     </div>
-    <!-- /u-vertical-space -->
+    <!-- /c-series -->
 
 
-    <div class="c-share u-vertical-space">
+    <div class="c-share u-vertical-space u-vertical-space--large">
       <span class="c-share__label">Share</span>
       <ul class="c-share-menu">
         <li class="c-share-menu__item">
-          <a class="c-share-menu__link" href="#" title="Share on Facebook">
+          <a class="c-share-menu__link js-share" href="https://www.facebook.com/sharer.php?u={{ 'https://www.qantas.com/' | urlencode }}" title="Share on Facebook">
             <svg class="o-icon c-share-menu__icon" width="24" height="24" focusable="false" role="img" aria-label="Share on Facebook">
               <use xlink:href="images/icons.svg#icon-facebook">
             </svg>
           </a>
         </li>
         <li class="c-share-menu__item">
-          <a class="c-share-menu__link" href="#" title="Share on Twitter">
+          <a class="c-share-menu__link js-share" href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&url={{ 'https://www.qantas.com/' | urlencode }}" title="Share on Twitter">
             <svg class="o-icon c-share-menu__icon" width="24" height="24" focusable="false" role="img" aria-label="Share on Twitter">
               <use xlink:href="images/icons.svg#icon-twitter">
             </svg>
@@ -31,6 +29,15 @@
       </ul>
     </div>
     <!-- /c-share -->
+
+
+    <div class="c-paid-for-by u-vertical-space u-vertical-space--large">
+      <div class="c-paid-for-by__label">Paid for by</div>
+      <a class="c-paid-for-by__link" href="https://www.qantas.com/">
+        <img class="c-paid-for-by__image" src="images/qantas.png" alt="Qantas – Spirit of Australia">
+      </a>
+    </div>
+    <!-- /c-paid-for-by -->
 
   </div>
   <!-- /o-container -->

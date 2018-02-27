@@ -7,6 +7,7 @@
 
 // Functions
 @import "tools/strip-unit";
+@import "tools/svg-encode";
 
 // Mixins
 @import "tools/fluid-type";
@@ -49,7 +50,10 @@
 @import "components/background";
 @import "components/carousel";
 @import "components/figure";
+@import "components/map";
+@import "components/paid-for-by";
 @import "components/quote";
+@import "components/series";
 @import "components/share";
 @import "components/sidebar";
 

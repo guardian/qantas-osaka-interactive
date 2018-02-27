@@ -1,0 +1,120 @@
+.c-map {
+  @media (min-width: 64em) {
+    display: flex;
+  }
+}
+
+.c-map__column {}
+
+.c-map__column--legend {
+  @include fluid-type(padding, 20em, 48em, 1em, 2em);
+  background-color: $concrete;
+
+  @media (min-width: 64em) {
+    flex: auto;
+  }
+}
+
+.c-map__column--image {
+  align-items: center;
+  background-color: $atlantis;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 64em) {
+    flex: 0 0 62.5%;
+  }
+}
+
+
+// Legend ------------------------------
+
+.c-map-legend {}
+
+.c-map-legend__title {
+  font-size: 2em;
+  line-height: 1.125;
+}
+
+.c-map-legend__subtitle {
+  font-weight: bold;
+  line-height: 1.125;
+  margin-bottom: 1em;
+}
+
+.c-map-legend__list {
+  counter-reset: map;
+  font-size: 0.75em;
+}
+
+.c-map-legend__item {
+  counter-increment: map;
+  padding-left: 2em;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+
+  &::before {
+    background-color: $lifeguard;
+    color: $white;
+    content: counter(map);
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 1.5em;
+  }
+}
+
+
+// Image -------------------------------
+
+.c-map-image {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  width: 100%;
+
+  text {
+    fill: $white;
+    text-anchor: middle;
+    transform: translate(75px, 170px);
+  }
+}
+
+.c-map-image__item {
+  &:nth-of-type(1) {
+    transform: translate(425px, 350px);
+  }
+
+  &:nth-of-type(2) {
+    transform: translate(50px, 275px);
+  }
+
+  &:nth-of-type(3) {
+    transform: translate(175px, 175px);
+  }
+
+  &:nth-of-type(4) {
+    transform: translate(200px, 400px);
+  }
+
+  &:nth-of-type(5) {
+    transform: translate(300px, 25px);
+  }
+
+  &:nth-of-type(6) {
+    transform: translate(300px, 275px);
+  }
+
+  &:nth-of-type(7) {
+    transform: translate(125px, -25px);
+  }
+
+  image {
+    height: 150px;
+    width: 150px;
+  }
+}

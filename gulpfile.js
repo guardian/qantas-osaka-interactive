@@ -25,11 +25,11 @@ gulp.task('browser-sync', () =>
   })
 )
 
-gulp.task('build', () =>
-  runSequence('build:clean', 'build:files', 'public')
+gulp.task('build', callback =>
+  runSequence('clean', 'build:files', 'public', callback)
 )
 
-gulp.task('build:clean', () =>
+gulp.task('clean', () =>
   del('dest')
 )
 
@@ -78,11 +78,8 @@ gulp.task('scripts', () =>
     .on('end', browserSync.reload)
 )
 
-gulp.task('stage', ['build'], () =>
-  surge({
-    project: 'dest',
-    domain: 'qantas-osaka-interactive.surge.sh'
-  })
+gulp.task('stage', callback =>
+  runSequence('build', 'surge', callback)
 )
 
 gulp.task('stylesheets', () =>
@@ -99,6 +96,13 @@ gulp.task('stylesheets', () =>
     .pipe(browserSync.stream({
       match: '**/*.css'
     }))
+)
+
+gulp.task('surge', () =>
+  surge({
+    project: 'dest',
+    domain: 'qantas-osaka-interactive.surge.sh'
+  })
 )
 
 gulp.task('templates', () =>

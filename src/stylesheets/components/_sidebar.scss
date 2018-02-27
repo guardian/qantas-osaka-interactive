@@ -24,3 +24,9 @@
     flex: 0 0 25%;
   }
 }
+
+.c-sidebar__column--middle {
+  @media (min-width: 48em) {
+    align-self: center;
+  }
+}

@@ -4,3 +4,8 @@
   max-width: 960px;
   width: 87.5%;
 }
+
+.o-container--align-right {
+  display: flex;
+  justify-content: flex-end;
+}

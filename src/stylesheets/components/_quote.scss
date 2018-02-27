@@ -1,3 +1,64 @@
 .c-quote {
   color: $lifeguard;
+  max-width: 240px;
+}
+
+.c-quote--border-bottom,
+.c-quote--border-top {
+  position: relative;
+
+  &::before,
+  &::after {
+    background-image: svg-encode('<svg viewBox="0 0 60 24"><path fill="none" stroke="#E00E00" stroke-width="4" d="M0 2c15 0 15 20 30 20S45 2 60 2"/></svg>');
+    height: 24px;
+    position: absolute;
+    width: 480px;
+  }
+}
+
+.c-quote--border-bottom {
+  padding-bottom: calc(2em + 24px);
+
+  &::after {
+    background-position: 100% 50%;
+    bottom: 0;
+    content: "";
+    right: 0;
+  }
+}
+
+.c-quote--border-top {
+  padding-top: calc(2em + 24px);
+
+  &::before {
+    background-position: 0 50%;
+    content: "";
+    left: 0;
+    top: 0;
+  }
+}
+
+.c-quote__term {
+  font-size: 2em;
+  font-style: italic;
+  font-weight: bold;
+  hyphens: none;
+  line-height: 1.125;
+  margin-bottom: 0.1875rem;
+  text-indent: -1em;
+
+  &::before {
+    content: "“";
+    display: inline-block;
+    text-align: right;
+    width: 1em;
+  }
+
+  &::after {
+    content: "”";
+  }
+}
+
+.c-quote__definition {
+  font-style: normal;
 }
