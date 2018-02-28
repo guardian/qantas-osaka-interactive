@@ -49,6 +49,7 @@
 
 .c-map-legend__item {
   counter-increment: map;
+  cursor: pointer;
   padding-left: 2em;
   position: relative;
 
@@ -72,49 +73,95 @@
 // Image -------------------------------
 
 .c-map-image {
-  font-size: 20px;
-  font-style: italic;
-  font-weight: bold;
+  background-image: url(/images/map.png);
+  background-size: cover;
+  counter-reset: map-image;
+  overflow: hidden;
+  padding-top: 100%;
+  position: relative;
   width: 100%;
-
-  text {
-    fill: $white;
-    text-anchor: middle;
-    transform: translate(75px, 170px);
-  }
 }
 
 .c-map-image__item {
-  &:nth-of-type(1) {
-    transform: translate(425px, 350px);
+  counter-increment: map-image;
+  position: absolute;
+  width: 25%;
+
+  &:nth-child(1) {
+    left: 70%;
+    top: 60%;
   }
 
-  &:nth-of-type(2) {
-    transform: translate(50px, 275px);
+  &:nth-child(2) {
+    left: 5%;
+    top: 45%;
   }
 
-  &:nth-of-type(3) {
-    transform: translate(175px, 175px);
+  &:nth-child(3) {
+    left: 27.5%;
+    top: 30%;
   }
 
-  &:nth-of-type(4) {
-    transform: translate(200px, 400px);
+  &:nth-child(4) {
+    left: 35%;
+    top: 65%;
   }
 
-  &:nth-of-type(5) {
-    transform: translate(300px, 25px);
+  &:nth-child(5) {
+    left: 50%;
+    top: 5%;
   }
 
-  &:nth-of-type(6) {
-    transform: translate(300px, 275px);
+  &:nth-child(6) {
+    left: 50%;
+    top: 45%;
   }
 
-  &:nth-of-type(7) {
-    transform: translate(125px, -25px);
+  &:nth-child(7) {
+    left: 20%;
+    top: -5%;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-1.25deg);
   }
 
-  image {
-    height: 150px;
-    width: 150px;
+  100% {
+    transform: rotate(1.25deg);
+  }
+}
+
+@for $i from 0 through 6 {
+  .c-map[data-mapitem="#{$i}"] .c-map-image__item:nth-child(#{$i + 1}) {
+    animation: 0.125s ease-in-out infinite alternate wiggle;
+  }
+}
+
+.c-map-image__image {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.c-map-image__label {
+  @include fluid-type(font-size, 20em, 48em, 0.5em, 0.875em);
+  align-items: center;
+  color: $white;
+  display: flex;
+  font-style: italic;
+  font-weight: bold;
+  justify-content: center;
+  left: 50%;
+  position: relative;
+  transform: translatex(-50%);
+  width: 200%;
+
+  &::before {
+    background-color: $lifeguard;
+    content: counter(map-image);
+    margin-right: 0.5em;
+    text-align: center;
+    width: 1.5em;
   }
 }

@@ -67,6 +67,7 @@ gulp.task('scripts', () =>
     'node_modules/flickity/dist/flickity.pkgd.js',
     'node_modules/svg4everybody/dist/svg4everybody.js',
     'node_modules/what-input/dist/what-input.js',
+    'node_modules/when-in-viewport/dist/whenInViewport.js',
     'src/scripts/*.js'
   ])
     .pipe(plumber())

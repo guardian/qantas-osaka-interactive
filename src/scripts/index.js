@@ -1,4 +1,20 @@
-function openPopupWindow(url) {
+function carousel() {
+  var flkty = new Flickity('.js-carousel');
+};
+
+
+function interactiveMap() {
+  var elements = Array.prototype.slice.call(document.getElementsByClassName('js-interactiveMap'));
+
+  elements.forEach(function(element, index) {
+    element.addEventListener('click', function() {
+      this.closest('.c-map').setAttribute('data-mapitem', index);
+    });
+  });
+};
+
+
+function popupWindow(url) {
   var width = 575;
   var height = 400;
   var multiScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screen.left;
@@ -14,18 +30,34 @@ function openPopupWindow(url) {
   window.open(url, '_blank', options);
 };
 
-function shareLinks() {
-  var links = Array.prototype.slice.call(document.getElementsByClassName('js-share'));
-  links.forEach(function(link) {
-    link.addEventListener('click', function(event) {
+
+function sharingLinks() {
+  var elements = Array.prototype.slice.call(document.getElementsByClassName('js-sharingLinks'));
+
+  elements.forEach(function(element) {
+    element.addEventListener('click', function(event) {
       event.preventDefault();
-      openPopupWindow(link.href);
+      popupWindow(element.href);
     });
   });
 };
 
+
+function viewportMonitor() {
+  var elements = Array.prototype.slice.call(document.getElementsByClassName('js-viewportMonitor'));
+
+  elements.forEach(function(element) {
+    new WhenInViewport(element, function(elementInViewport) {
+      elementInViewport.classList.add('in-viewport');
+    });
+  });
+};
+
+
 document.addEventListener('DOMContentLoaded', function() {
-  var flkty = new Flickity('.js-carousel');
-  shareLinks();
+  carousel();
+  interactiveMap();
+  sharingLinks();
   svg4everybody();
+  viewportMonitor();
 });

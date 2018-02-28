@@ -3,7 +3,7 @@
   max-width: 240px;
 }
 
-@keyframes wiggle {
+@keyframes squiggle {
   100% {
     background-position: 60px 0;
   }
@@ -15,7 +15,7 @@
 
   &::before,
   &::after {
-    animation: 1s linear infinite wiggle;
+    animation: 1s linear infinite squiggle;
     background-image: svg-encode('<svg viewBox="0 0 60 24"><path fill="none" stroke="#E00E00" stroke-width="4" d="M0 2c15 0 15 20 30 20S45 2 60 2"/></svg>');
     height: 24px;
     position: absolute;

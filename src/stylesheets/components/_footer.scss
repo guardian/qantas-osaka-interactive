@@ -8,7 +8,12 @@
 
 .c-footer__container {
   @media (min-width: 48em) {
-    margin-bottom: -2em;
     position: relative;
+  }
+}
+
+.c-footer__share {
+  @media (min-width: 48em) {
+    margin-bottom: 0 !important;
   }
 }

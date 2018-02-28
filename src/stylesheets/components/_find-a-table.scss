@@ -1,0 +1,171 @@
+.c-find-a-table {
+  @include fluid-type(height, 20em, 48em, 12em, 24em);
+  @include fluid-type(margin-bottom, 20em, 48em, 2em, 4em);
+  align-items: center;
+  background-image: linear-gradient(to bottom, $gallery 70%, $aqua 70%);
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  overflow: hidden;
+}
+
+.c-find-a-table__container {
+  @include fluid-type(height width, 20em, 48em, 12em, 24em);
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    background-color: $white;
+    border-radius: 50%;
+    content: "";
+    height: 133.3333333333%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 133.3333333333%;
+    z-index: -1;
+  }
+}
+
+@keyframes fly-in {
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.c-find-a-table__layer {
+  animation: 1s ease 1 forwards paused fly-in;
+  position: absolute;
+
+  &:nth-child(1) {
+    height: 25%;
+    left: 60%;
+    margin: -12.5% 0 0 -12.5%;
+    top: 15%;
+    transform: translate(25%, -125%);
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.125s;
+    height: 25%;
+    left: 25%;
+    margin: -12.5% 0 0 -12.5%;
+    top: 25%;
+    transform: translate(-150%, -150%);
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.25s;
+    height: 25%;
+    left: 80%;
+    margin: -12.5% 0 0 -12.5%;
+    top: 70%;
+    transform: translate(175%, 175%);
+  }
+
+  &:nth-child(4) {
+    animation-delay: 0.375s;
+    height: 32.5%;
+    left: 15%;
+    margin: -16.25% 0 0 -16.25%;
+    top: 70%;
+    transform: translate(-150%, 150%);
+  }
+
+  &:nth-child(5) {
+    height: 22.5%;
+    left: 50%;
+    margin: -11.25% 0 0 -12.5%;
+    top: 50%;
+  }
+
+  &:nth-child(6) {
+    animation-delay: 0.5s;
+    height: 20%;
+    left: 50%;
+    margin: -10% 0 0 -10%;
+    top: 85%;
+    transform: translate(0, 125%);
+  }
+
+  &:nth-child(7) {
+    animation-delay: 1s;
+    height: 15%;
+    left: 80%;
+    margin: -7.5% 0 0 -7.5%;
+    opacity: 0;
+    top: 30%;
+
+    .c-find-a-table__image {
+      transform: rotate(240deg);
+    }
+  }
+
+  &:nth-child(8) {
+    animation-delay: 1.25s;
+    height: 15%;
+    left: 25%;
+    margin: -7.5% 0 0 -7.5%;
+    opacity: 0;
+    top: 90%;
+  }
+
+  &:nth-child(9) {
+    animation-delay: 1.5s;
+    height: 15%;
+    left: -30%;
+    margin: -7.5% 0 0 -7.5%;
+    opacity: 0;
+    top: 15%;
+
+    .c-find-a-table__image {
+      transform: rotate(60deg);
+    }
+  }
+
+  &:nth-child(10) {
+    animation-delay: 1.75s;
+    height: 15%;
+    left: 150%;
+    margin: -7.5% 0 0 -7.5%;
+    opacity: 0;
+    top: 80%;
+
+    .c-find-a-table__image {
+      transform: rotate(200deg);
+    }
+  }
+
+  &:nth-child(11) {
+    animation-delay: 0.625s;
+    height: 6.25%;
+    left: -20%;
+    margin: -3.125% 0 0 -35%;
+    top: 40%;
+    transform: translate(-250%, 0);
+  }
+
+  &:nth-child(12) {
+    animation-delay: 0.75s;
+    height: 6.25%;
+    left: 110%;
+    margin: -3.125% 0 0 -35%;
+    top: 55%;
+    transform: translate(250%, 1000%);
+
+    .c-find-a-table__image {
+      transform: rotate(200deg);
+    }
+  }
+}
+
+.c-find-a-table.in-viewport .c-find-a-table__layer {
+  animation-play-state: running;
+}
+
+.c-find-a-table__image {
+  max-height: 100%;
+  max-width: none;
+}

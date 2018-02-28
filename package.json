@@ -23,7 +23,8 @@
   "dependencies": {
     "flickity": "^2.0.10",
     "svg4everybody": "^2.1.9",
-    "what-input": "^5.0.5"
+    "what-input": "^5.0.5",
+    "when-in-viewport": "^2.0.3"
   },
   "scripts": {
     "build": "gulp build",
