@@ -1,32 +1,61 @@
+{% set theme = "t-food" %}
 {% set title = "The foodie’s guide to Osaka" %}
 {% extends "generic/regions.njk" %}
+{% block header %}
+<header class="c-header">
+
+  <div class="c-background c-header__background">
+    <img class="c-background__image" src="{{ cdn }}images/ramen-soup.jpg" alt="">
+  </div>
+  <!-- /c-background -->
+
+
+  <div class="o-container">
+
+    <h1 class="c-title c-header__title u-vertical-space">{{ title }}</h1>
+    <!-- c-title -->
+
+
+    <div class="s-entry-content c-header__entry-content u-vertical-space">
+      <p>During the Edo period, Osaka was known as “the nation’s kitchen”, discover what makes this bustling city in the heart of Japan a must see destination for foodies.</p>
+    </div>
+    <!-- /s-entry-content -->
+
+  </div>
+  <!-- /o-container -->
+
+</header>
+<!-- /header -->
+{% endblock %}
 {% block main %}
 <main class="c-main">
 
-  <div class="c-section c-section--margin">
+  <div class="c-section">
 
     <div class="o-container">
 
-      <div class="c-sidebar u-vertical-space u-vertical-space--large">
-        <div class="c-sidebar__column c-sidebar__column--fixed">
+      <div class="c-columns u-vertical-space">
+        <div class="c-columns__list">
+          <div class="c-columns__item c-columns__item--third">
 
-          <div class="s-entry-content s-entry-content--lead">
-            <p>It has been rumoured that the people of Osaka spend more on food than anything else, and with so many delectable choices who can blame them?</p>
+            <div class="s-entry-content s-entry-content--highlight">
+              <p>It has been rumoured that the people of Osaka spend more on food than anything else, and with so many delectable choices who can blame them?</p>
+            </div>
+            <!-- /s-entry-content -->
+
           </div>
-          <!-- /s-entry-content -->
+          <div class="c-columns__item">
 
-        </div>
-        <div class="c-sidebar__column">
+            <div class="s-entry-content">
+              <p>The beautiful city is characterised by traditional architecture, a lively bar and entertainment scene, and of course a seemingly infinite amount of places to eat. Dedicate your days to working on your appetite by exploring the narrow laneways studded with hidden eateries, sampling street vendors’ skewers adorned with sizzling meats, or getting lost in a hot bowl of silky udon noodles served in a full bodied broth.</p>
+              <p>Regardless of your dietary requirements, there’s an experience fit for every foodie - from settling in to a traditional degustation at a Michelin star restaurant to sampling the freshest sashimi grade tuna at a busy fish market…it won’t take you long to learn why Osaka is known for kuidaore (eating until you drop). And if you’re feeling a little overwhelmed by choice, the best strategy for finding the tastiest food, is to seek out the place with the longest line of locals.</p>
+            </div>
+            <!-- /s-entry-content -->
 
-          <div class="s-entry-content">
-            <p><strong>The beautiful city</strong> is characterised by traditional architecture, a lively bar and entertainment scene, and of course a seemingly infinite amount of places to eat. Dedicate your days to working on your appetite by exploring the narrow laneways studded with hidden eateries, sampling street vendors’ skewers adorned with sizzling meats, or getting lost in a hot bowl of silky udon noodles served in a full bodied broth.</p>
-            <p>Regardless of your dietary requirements, there’s an experience fit for every foodie - from settling in to a traditional degustation at a Michelin star restaurant to sampling the freshest sashimi grade tuna at a busy fish market…it won’t take you long to learn why Osaka is known for kuidaore (eating until you drop).  And if you’re feeling a little overwhelmed by choice, the best strategy for finding the tastiest food, is to seek out the place with the longest line of locals.</p>
           </div>
-          <!-- /s-entry-content -->
-
         </div>
       </div>
-      <!-- /c-sidebar -->
+      <!-- /c-columns -->
 
     </div>
     <!-- /o-container -->
@@ -35,54 +64,54 @@
   <!-- /c-section -->
 
 
-  <div class="c-section c-section--margin">
+  <div class="c-section">
 
     <div class="o-container">
 
-      <h2 class="c-title u-vertical-space u-vertical-space--large">Find a table</h2>
+      <h2 class="c-title u-vertical-space">Find a table</h2>
       <!-- /c-title -->
 
     </div>
     <!-- /o-container -->
 
 
-    <div class="c-find-a-table js-viewportMonitor">
-      <div class="c-find-a-table__container">
+    <div class="c-find-a-table js-viewport">
+      <div class="c-find-a-table__scene">
         <div class="c-find-a-table__layer">
-          <img class="c-find-a-table__image" src="images/find-a-table-1.png" alt="">
+          <img class="c-find-a-table__image" src="{{ cdn }}images/find-a-table-1.png" alt="">
         </div>
         <div class="c-find-a-table__layer">
-          <img class="c-find-a-table__image" src="images/find-a-table-2.png" alt="">
+          <img class="c-find-a-table__image" src="{{ cdn }}images/find-a-table-2.png" alt="">
         </div>
         <div class="c-find-a-table__layer">
-          <img class="c-find-a-table__image" src="images/find-a-table-2.png" alt="">
+          <img class="c-find-a-table__image" src="{{ cdn }}images/find-a-table-2.png" alt="">
         </div>
         <div class="c-find-a-table__layer">
-          <img class="c-find-a-table__image" src="images/find-a-table-3.png" alt="">
+          <img class="c-find-a-table__image" src="{{ cdn }}images/find-a-table-3.png" alt="">
         </div>
         <div class="c-find-a-table__layer">
-          <img class="c-find-a-table__image" src="images/find-a-table-4.png" alt="">
+          <img class="c-find-a-table__image" src="{{ cdn }}images/find-a-table-4.png" alt="">
         </div>
         <div class="c-find-a-table__layer">
-          <img class="c-find-a-table__image" src="images/find-a-table-5.png" alt="">
+          <img class="c-find-a-table__image" src="{{ cdn }}images/find-a-table-5.png" alt="">
         </div>
         <div class="c-find-a-table__layer">
-          <img class="c-find-a-table__image" src="images/find-a-table-6.png" alt="">
+          <img class="c-find-a-table__image" src="{{ cdn }}images/find-a-table-6.png" alt="">
         </div>
         <div class="c-find-a-table__layer">
-          <img class="c-find-a-table__image" src="images/find-a-table-6.png" alt="">
+          <img class="c-find-a-table__image" src="{{ cdn }}images/find-a-table-6.png" alt="">
         </div>
         <div class="c-find-a-table__layer">
-          <img class="c-find-a-table__image" src="images/find-a-table-6.png" alt="">
+          <img class="c-find-a-table__image" src="{{ cdn }}images/find-a-table-6.png" alt="">
         </div>
         <div class="c-find-a-table__layer">
-          <img class="c-find-a-table__image" src="images/find-a-table-6.png" alt="">
+          <img class="c-find-a-table__image" src="{{ cdn }}images/find-a-table-6.png" alt="">
         </div>
         <div class="c-find-a-table__layer">
-          <img class="c-find-a-table__image" src="images/find-a-table-7.png" alt="">
+          <img class="c-find-a-table__image" src="{{ cdn }}images/find-a-table-7.png" alt="">
         </div>
         <div class="c-find-a-table__layer">
-          <img class="c-find-a-table__image" src="images/find-a-table-7.png" alt="">
+          <img class="c-find-a-table__image" src="{{ cdn }}images/find-a-table-7.png" alt="">
         </div>
       </div>
     </div>
@@ -91,35 +120,37 @@
 
     <div class="o-container">
 
-      <div class="c-sidebar u-vertical-space u-vertical-space--large">
-        <div class="c-sidebar__column c-sidebar__column--fixed c-sidebar__column--middle">
+      <div class="c-columns u-vertical-space">
+        <div class="c-columns__list c-columns__list--middle">
+          <div class="c-columns__item c-columns__item--third">
 
-          <blockquote class="c-quote c-quote--border-bottom">
-            <p class="c-quote__term">Kuchi zamishi</p>
-            <cite class="c-quote__definition">When you’re not hungry but you eat because your mouth is lonely.</cite>
-          </blockquote>
-          <!-- /c-quote -->
+            <dl class="c-quote c-quote--border-bottom">
+              <dt class="c-quote__term">Kuchi zamishi</dt>
+              <dd class="c-quote__definition">When you’re not hungry but you eat because your mouth is lonely.</dd>
+            </dl>
+            <!-- /c-quote -->
 
-        </div>
-        <div class="c-sidebar__column">
-
-          <div class="s-entry-content">
-            <h3>Sushi Wakon</h3>
-            <p>This Michelin star sushi stop boasts a menu that changes everyday depending on what produce looks freshest at the fish market. Opt for the omakase menu (a type of meal consisting of dishes selected by the chef)… but be sure to book ahead, the pint-sized eatery only seats 10 people!</p>
-            <h3>Jan Jan Yokocho alley</h3>
-            <p>After a few minutes wandering through Jan Jan Yokocho alley, you’ll realise why Osaka has a reputation for being one of the best cities for eating. Here the kushikatsu (sizzling meat skewers) cost just over $1 and come with a side of all you can eat cabbage.</p>
-            <h3>Hariju Dontonbori</h3>
-            <p>Sample some amazing Kobe beef at this legendary Osakan restaurant, which has been serving up soul warming hot pots and sukiyaki for over 100 years. The set meals cost between $80 - $200 depending on the choice of beef, which is available in five grades.</p>
-            <h3>Hajime</h3>
-            <p>This experimental eatery, named after owner Hajime Yoneda was this year awarded three Michelin stars. The inventive menu is inspired by themes of earth and space, and dishes are almost too beautiful to eat… almost. For those lucky few who can get a table, it’s an unforgettable dining experience.</p>
-            <h3>Yoshino Sushi</h3>
-            <p>Founded in 1841, Yoshino Sushi has been around long enough to have earned a reputation for serving up serious sushi. Settle in for some oshi-zushi a type of pressed sushi which originated in Osaka, or enjoy a lunch box packed with favourites like vinegar treated mackerel and eel.</p>
           </div>
-          <!-- /s-entry-content -->
+          <div class="c-columns__item">
 
+            <div class="s-entry-content">
+              <h3>Sushi Wakon</h3>
+              <p>This Michelin star sushi stop boasts a menu that changes everyday depending on what produce looks freshest at the fish market. Opt for the omakase menu (a type of meal consisting of dishes selected by the chef)… but be sure to book ahead, the pint-sized eatery only seats 10 people!</p>
+              <h3>Jan Jan Yokocho alley</h3>
+              <p>After a few minutes wandering through Jan Jan Yokocho alley, you’ll realise why Osaka has a reputation for being one of the best cities for eating. Here the kushikatsu (sizzling meat skewers) cost just over $1 and come with a side of all you can eat cabbage.</p>
+              <h3>Hariju Dontonbori</h3>
+              <p>Sample some amazing Kobe beef at this legendary Osakan restaurant, which has been serving up soul warming hot pots and sukiyaki for over 100 years. The set meals cost between $80 - $200 depending on the choice of beef, which is available in five grades.</p>
+              <h3>Hajime</h3>
+              <p>This experimental eatery, named after owner Hajime Yoneda was this year awarded three Michelin stars. The inventive menu is inspired by themes of earth and space, and dishes are almost too beautiful to eat… almost. For those lucky few who can get a table, it’s an unforgettable dining experience.</p>
+              <h3>Yoshino Sushi</h3>
+              <p>Founded in 1841, Yoshino Sushi has been around long enough to have earned a reputation for serving up serious sushi. Settle in for some oshi-zushi a type of pressed sushi which originated in Osaka, or enjoy a lunch box packed with favourites like vinegar treated mackerel and eel.</p>
+            </div>
+            <!-- /s-entry-content -->
+
+          </div>
         </div>
       </div>
-      <!-- /c-sidebar -->
+      <!-- /c-columns -->
 
     </div>
     <!-- /o-container -->
@@ -128,72 +159,44 @@
   <!-- /c-section -->
 
 
-  <div class="c-section c-section--margin">
+  <div class="c-section">
 
     <div class="o-container">
 
-      <h2 class="c-title u-vertical-space u-vertical-space--large">Eat like a local</h2>
+      <h2 class="c-title u-vertical-space">Eat like a local</h2>
       <!-- /c-title -->
 
 
-      <div class="c-carousel js-carousel">
-        <div class="c-carousel__item">
-          <div class="c-carousel__cover">
-            <img class="c-carousel__image" src="images/okonomiyaki.jpg" alt="">
-          </div>
-          <div class="c-carousel__caption">
-            <div class="s-entry-content">
-              <h3>Okonomiyaki</h3>
-              <p>This signature and original Osakan dish derives its name from “okonomi” meaning, “what you like” and they’re not kidding, this savory pancake-like dish is a sort of choose your own adventure food experience where you can pick the flavours and a chef cooks it before your eyes. The flavour choices vary across Japan, but in Osaka the flour based batter is mixed with octopus or prawns, egg and shredded cabbage, then ladled onto a hot grill and served hot topped with sizzling pork belly, dried bonito and mayonnaise.</p>
-            </div>
-          </div>
-        </div>
-        <div class="c-carousel__item">
-          <div class="c-carousel__cover">
-            <img class="c-carousel__image" src="images/kushikatsu.jpg" alt="">
-          </div>
-          <div class="c-carousel__caption">
-            <div class="s-entry-content">
-              <h3>Kushikatsu</h3>
-              <p>The bite size skewers of deep fried meat and vegetables were invented in Shinsekai, a district in southern Osaka, which remains the best place to sample this traditional street food. The skewers come in a number different flavours including offal and cartilage for the more adventurous. Most eateries offer a communal sweet tangy sauce but be sure to only dip your skewer once! It’s considered very rude to double dip.</p>
-            </div>
-          </div>
-        </div>
-        <div class="c-carousel__item">
-          <div class="c-carousel__cover">
-            <img class="c-carousel__image" src="images/takoyaki.jpg" alt="">
-          </div>
-          <div class="c-carousel__caption">
-            <div class="s-entry-content">
-              <h3>Takoyaki (also known as “octopus balls”)</h3>
-              <p>Takoyaki literally means “grilled octopus” and is a crowd favourite amongst Osakans. Street vendors combine the gloopy egg based batter with roughly cut slices of fresh octopus, pickled ginger and green onions and then spoon the mix into a special takoyaki pan which forms the batter into delectable sizzling spheres. Once cooked, the balls are drizzled with sweet takoyaki sauce and mayonnaise.</p>
-            </div>
-          </div>
-        </div>
-        <div class="c-carousel__item">
-          <div class="c-carousel__cover">
-            <img class="c-carousel__image" src="images/yakiniku.jpg" alt="">
-          </div>
-          <div class="c-carousel__caption">
-            <div class="s-entry-content">
-              <h3>Yakiniku</h3>
-              <p>Any connoisseur of meat knows Kobe beef is king. This special type of Japanese wagyu is one of the world’s best and comes from Kobe, a region located just 30 minutes by train from Osaka, which means it’s readily available. One of the best ways to enjoy Kobe beef is by Yakiniku, which is the Japanese style of cooking meat yourself on a charcoal grill in the middle of your table. The fat marbled mouth watering slices only need a few seconds on the grill and are so packed with flavours they don’t need any accompaniments.</p>
-            </div>
-          </div>
-        </div>
-        <div class="c-carousel__item">
-          <div class="c-carousel__cover">
-            <img class="c-carousel__image" src="images/fugu-sashimi.jpg" alt="">
-          </div>
-          <div class="c-carousel__caption">
-            <div class="s-entry-content">
-              <h3>Tessa</h3>
-              <p>Osaka’s famous sashimi made from poisonous fugu, or globefish. It takes two years for chefs to earn the certification to be allowed to prepare the dangerous fish, which is designed to retain just enough poison to numb your lips! Although the dish is heavily regulated, be careful... the problematic puffer fish accounts for the majority of Japan’s food poisoning deaths, and results in around 40 hospitalisations a year!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /c-carousel -->
+      {% set carousel = [
+        {
+          imageURL: 'images/okonomiyaki.jpg',
+          title: 'Okonomiyaki',
+          description: 'This signature and original Osakan dish derives its name from “okonomi” meaning, “what you like” and they’re not kidding, this savory pancake-like dish is a sort of choose your own adventure food experience where you can pick the flavours and a chef cooks it before your eyes. The flavour choices vary across Japan, but in Osaka the flour based batter is mixed with octopus or prawns, egg and shredded cabbage, then ladled onto a hot grill and served hot topped with sizzling pork belly, dried bonito and mayonnaise.'
+        },
+        {
+          imageURL: 'images/kushikatsu.jpg',
+          title: 'Kushikatsu',
+          description: 'The bite size skewers of deep fried meat and vegetables were invented in Shinsekai, a district in southern Osaka, which remains the best place to sample this traditional street food. The skewers come in a number different flavours including offal and cartilage for the more adventurous. Most eateries offer a communal sweet tangy sauce but be sure to only dip your skewer once! It’s considered very rude to double dip.'
+        },
+        {
+          imageURL: 'images/takoyaki.jpg',
+          title: 'Takoyaki (also known as “octopus balls”)',
+          description: 'Takoyaki literally means “grilled octopus” and is a crowd favourite amongst Osakans. Street vendors combine the gloopy egg based batter with roughly cut slices of fresh octopus, pickled ginger and green onions and then spoon the mix into a special takoyaki pan which forms the batter into delectable sizzling spheres. Once cooked, the balls are drizzled with sweet takoyaki sauce and mayonnaise.'
+        },
+        {
+          imageURL: 'images/yakiniku.jpg',
+          title: 'Yakiniku',
+          description: 'Any connoisseur of meat knows Kobe beef is king. This special type of Japanese wagyu is one of the world’s best and comes from Kobe, a region located just 30 minutes by train from Osaka, which means it’s readily available. One of the best ways to enjoy Kobe beef is by Yakiniku, which is the Japanese style of cooking meat yourself on a charcoal grill in the middle of your table. The fat marbled mouth watering slices only need a few seconds on the grill and are so packed with flavours they don’t need any accompaniments.'
+        },
+        {
+          imageURL: 'images/fugu-sashimi.jpg',
+          title: 'Tessa',
+          description: 'Osaka’s famous sashimi made from poisonous fugu, or globefish. It takes two years for chefs to earn the certification to be allowed to prepare the dangerous fish, which is designed to retain just enough poison to numb your lips! Although the dish is heavily regulated, be careful... the problematic puffer fish accounts for the majority of Japan’s food poisoning deaths, and results in around 40 hospitalisations a year!'
+        }
+      ] %}
+
+
+      {% include "components/carousel.njk" %}
 
     </div>
     <!-- /o-container -->
@@ -202,28 +205,28 @@
   <!-- /c-section -->
 
 
-  <div class="c-section c-section--margin">
+  <div class="c-section">
 
     <div class="o-container">
 
-      <h2 class="c-title u-vertical-space u-vertical-space--large">On the map</h2>
+      <h2 class="c-title u-vertical-space">On the map</h2>
       <!-- /c-title -->
 
 
-      <div class="c-map">
+      <div class="c-map u-vertical-space">
         <div class="c-map__column c-map__column--legend">
 
-          <div class="c-map-legend">
+          <div class="c-map-legend js-map-legend">
             <h3 class="c-map-legend__title">Osaka</h3>
             <p class="c-map-legend__subtitle">Places to eat</p>
             <ol class="c-map-legend__list">
-              <li class="c-map-legend__item js-interactiveMap">Head to <strong>Kuromon</strong> Market​ for fresher than fresh sashimi and a cold beer.</li>
-              <li class="c-map-legend__item js-interactiveMap">The backstreets around <strong>Namba station​</strong> are filled with the cosiest ramen joints.</li>
-              <li class="c-map-legend__item js-interactiveMap">Neon-lit <strong>Dotonmbori​</strong> is perfect for late night takoyaki balls and sizzling okonomiyaki.</li>
-              <li class="c-map-legend__item js-interactiveMap">Wander around old school <strong>Shinsekai​</strong> and chow down on a few kushikatsu skewers.</li>
-              <li class="c-map-legend__item js-interactiveMap">The entertainment district <strong>Kitashinchi​</strong> has hundreds of tasty restaurants to sample.</li>
-              <li class="c-map-legend__item js-interactiveMap">Enjoy a drink in <strong>Hozenji alleyway​</strong>, home to many traditional bars.</li>
-              <li class="c-map-legend__item js-interactiveMap">For the less adventurous, <strong>Osaka City Station​</strong> has a number of elegant eateries.</li>
+              <li class="c-map-legend__item">Head to <strong>Kuromon</strong> Market​ for fresher than fresh sashimi and a cold beer.</li>
+              <li class="c-map-legend__item">The backstreets around <strong>Namba station​</strong> are filled with the cosiest ramen joints.</li>
+              <li class="c-map-legend__item">Neon-lit <strong>Dotonmbori​</strong> is perfect for late night takoyaki balls and sizzling okonomiyaki.</li>
+              <li class="c-map-legend__item">Wander around old school <strong>Shinsekai​</strong> and chow down on a few kushikatsu skewers.</li>
+              <li class="c-map-legend__item">The entertainment district <strong>Kitashinchi​</strong> has hundreds of tasty restaurants to sample.</li>
+              <li class="c-map-legend__item">Enjoy a drink in <strong>Hozenji alleyway​</strong>, home to many traditional bars.</li>
+              <li class="c-map-legend__item">For the less adventurous, <strong>Osaka City Station​</strong> has a number of elegant eateries.</li>
             </ol>
           </div>
           <!-- /c-map-legend -->
@@ -233,31 +236,31 @@
 
           <div class="c-map-image">
             <div class="c-map-image__item">
-              <img class="c-map-image__image" src="images/map-1.png" alt="">
+              <img class="c-map-image__image" src="{{ cdn }}images/map-2.png" alt="">
               <span class="c-map-image__label">Kuromon Market</span>
             </div>
             <div class="c-map-image__item">
-              <img class="c-map-image__image" src="images/map-2.png" alt="">
+              <img class="c-map-image__image" src="{{ cdn }}images/map-3.png" alt="">
               <span class="c-map-image__label">Namba station</span>
             </div>
             <div class="c-map-image__item">
-              <img class="c-map-image__image" src="images/map-3.png" alt="">
+              <img class="c-map-image__image" src="{{ cdn }}images/map-4.png" alt="">
               <span class="c-map-image__label">Dotonmbori</span>
             </div>
             <div class="c-map-image__item">
-              <img class="c-map-image__image" src="images/map-4.png" alt="">
+              <img class="c-map-image__image" src="{{ cdn }}images/map-5.png" alt="">
               <span class="c-map-image__label">Shinsekai</span>
             </div>
             <div class="c-map-image__item">
-              <img class="c-map-image__image" src="images/map-5.png" alt="">
+              <img class="c-map-image__image" src="{{ cdn }}images/map-6.png" alt="">
               <span class="c-map-image__label">Kitashinchi</span>
             </div>
             <div class="c-map-image__item">
-              <img class="c-map-image__image" src="images/map-6.png" alt="">
+              <img class="c-map-image__image" src="{{ cdn }}images/map-7.png" alt="">
               <span class="c-map-image__label">Hozenji alleyway</span>
             </div>
             <div class="c-map-image__item">
-              <img class="c-map-image__image" src="images/map-7.png" alt="">
+              <img class="c-map-image__image" src="{{ cdn }}images/map-8.png" alt="">
               <span class="c-map-image__label">Osaka City Station</span>
             </div>
           </div>
@@ -274,15 +277,24 @@
   <!-- /c-section -->
 
 
-  <div class="c-section c-section--margin">
+  <div class="c-section">
 
-    <div class="o-container o-container--align-right">
+    <div class="o-container">
 
-      <blockquote class="c-quote c-quote--border-top">
-        <p class="c-quote__term">Oishii</p>
-        <cite class="c-quote__definition">The food is delicious!</cite>
-      </blockquote>
-      <!-- /c-quote -->
+      <div class="c-columns u-vertical-space">
+        <div class="c-columns__list">
+          <div class="c-columns__item c-columns__item--right c-columns__item--third">
+
+            <dl class="c-quote c-quote--border-top">
+              <dt class="c-quote__term">Oishii</dt>
+              <dd class="c-quote__definition">The food is delicious!</dd>
+            </dl>
+            <!-- /c-quote -->
+
+          </div>
+        </div>
+      </div>
+      <!-- /c-columns -->
 
     </div>
     <!-- /o-container -->
@@ -291,23 +303,22 @@
   <!-- /c-section -->
 
 
-  <div class="c-section c-section--margin">
+  <div class="c-section">
 
     <div class="o-container">
 
-      <h2 class="c-title u-vertical-space u-vertical-space--large">For goodness saké</h2>
+      <h2 class="c-title u-vertical-space">For goodness saké</h2>
       <!-- /c-title -->
 
 
-      <figure class="c-figure u-vertical-space u-vertical-space--large">
-        <img src="images/sake.jpg" alt="">
-        <figcaption class="c-figure__caption">Saké</figcaption>
-      </figure>
-      <!-- /c-figure -->
+      <div class="u-vertical-space">
+        <img src="{{ cdn }}images/sake.jpg" alt="">
+      </div>
+      <!-- /u-vertical-space -->
 
 
-      <div class="s-entry-content u-vertical-space u-vertical-space--large">
-        <p><strong>From the outside</strong> Shimada Shoten looks like any old store, but hidden below is a meticulously stocked cellar offering saké tastings (‘sake no shi in’) from over 250 breweries all across Japan. You’ll be able to sample everything from the high-end options like Daiginjo down to the more accessible entries like Jozo and Junmai, though your best bet is to seek recommendations from Shimada Shoten’s dedicated owner and connoisseur. The tasting bar also serves tasty shu-ko to accompany the drinking and true aficionados can opt to purchase a traditional ochoko saké cup for the ultimate tasting experience.</p>
+      <div class="s-entry-content u-vertical-space">
+        <p>From the outside Shimada Shoten looks like any old store, but hidden below is a meticulously stocked cellar offering saké tastings (‘sake no shi in’) from over 250 breweries all across Japan. You’ll be able to sample everything from the high-end options like Daiginjo down to the more accessible entries like Jozo and Junmai, though your best bet is to seek recommendations from Shimada Shoten’s dedicated owner and connoisseur. The tasting bar also serves tasty shu-ko to accompany the drinking and true aficionados can opt to purchase a traditional ochoko saké cup for the ultimate tasting experience.</p>
       </div>
       <!-- /s-entry-content -->
 
@@ -318,7 +329,7 @@
   <!-- /c-section -->
 
 
-  {% include "components/call-to-action.njk" %}
+  {% include "components/qantas.njk" %}
 
 </main>
 <!-- /main -->

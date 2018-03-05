@@ -1,0 +1,7 @@
+.c-content-block {
+  @include fluid-type(padding, 20em, 48em, 2em, 4em);
+}
+
+.c-content-block--seamist {
+  background-color: $seamist;
+}

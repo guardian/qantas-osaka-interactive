@@ -1,6 +1,396 @@
-{% set title = "" %}
+{% set theme = "t-culture" %}
+{% set title = "A cultural guide to Osaka" %}
 {% extends "generic/regions.njk" %}
+{% block header %}
+<header class="c-header">
+
+  <div class="c-background c-header__background">
+    <img class="c-background__image" src="{{ cdn }}images/autumn-park.jpg" alt="">
+  </div>
+  <!-- /c-background -->
+
+
+  <div class="o-container">
+
+    <h1 class="c-title c-header__title u-vertical-space">{{ title }}</h1>
+    <!-- c-title -->
+
+
+    <div class="s-entry-content c-header__entry-content u-vertical-space">
+      <p>Osaka is a city with over 1500 years of history and tradition, yet we’re now only beginning to discover all that it has to offer.</p>
+    </div>
+    <!-- /s-entry-content -->
+
+  </div>
+  <!-- /o-container -->
+
+</header>
+<!-- /header -->
+{% endblock %}
 {% block main %}
-<main class="c-main"></main>
+<main class="c-main">
+
+  <div class="c-section">
+
+    <div class="o-container">
+
+      <div class="c-columns u-vertical-space">
+        <div class="c-columns__list">
+          <div class="c-columns__item c-columns__item--third">
+
+            <div class="s-entry-content s-entry-content--highlight">
+              <p>In just the past five years tourism has absolutely exploded in the Osaka and surrounding Kansai region, jumping by a whopping 363% - more than double that of anywhere else in the country.</p>
+            </div>
+            <!-- /s-entry-content -->
+
+          </div>
+          <div class="c-columns__item">
+
+            <div class="s-entry-content">
+              <p>Renowned for its stunning architecture and rich cultural heritage (as well as offering a far more price-friendly alternative to Tokyo), there’s never been a better time to take advantage of Qantas’ direct flights from Australia and explore all the wonders of the place the Japanese call ‘tenka no daidokoro’ (‘the kitchen under the heavens’).</p>
+            </div>
+            <!-- /s-entry-content -->
+
+          </div>
+        </div>
+      </div>
+      <!-- /c-columns -->
+
+    </div>
+    <!-- /o-container -->
+
+  </div>
+  <!-- /c-section -->
+
+
+  <div class="c-section">
+
+    <div class="o-container">
+
+      <h2 class="c-title u-vertical-space">Osaka prefecture: by the numbers</h2>
+      <!-- /c-title -->
+
+    </div>
+    <!-- /o-container -->
+
+  </div>
+  <!-- /c-section -->
+
+
+  <div class="c-section">
+
+    <div class="o-container">
+
+      <h2 class="c-title u-vertical-space">By day / by night</h2>
+      <!-- /c-title -->
+
+
+      <div class="c-columns u-vertical-space">
+        <div class="c-columns__list">
+          <div class="c-columns__item">
+
+            <img src="{{ cdn }}images/meera-osaka-night.jpg" alt="">
+
+          </div>
+          <div class="c-columns__item">
+
+            <div class="s-entry-content">
+              <p>Osaka’s population changes depending on what time of day it is! Whilst the sun’s up, it’s the second largest city in Japan after Tokyo, but by night - when many of its workers leave the city and head home - it becomes the third largest city, pipped to the silver medal by Yokohama.</p>
+            </div>
+            <!-- /s-entry-content -->
+
+          </div>
+        </div>
+      </div>
+      <!-- /c-columns -->
+
+    </div>
+    <!-- /o-container -->
+
+  </div>
+  <!-- /c-section -->
+
+
+  <div class="c-section">
+
+    <div class="o-container">
+
+      <h2 class="c-title u-vertical-space">Jazz</h2>
+      <!-- /c-title -->
+
+
+      <div class="u-vertical-space">
+        <img src="{{ cdn }}https://placehold.it/960x640" alt="">
+      </div>
+      <!-- /u-vertical-space -->
+
+
+      <div class="s-entry-content u-vertical-space">
+        <p>Osaka is the birthplace of Jazz in Japan, and there’s no better way to take in the sights and a cover of ‘On The Sunny Side of the Street’ than to hop aboard the Tombori River Jazz Boat. This 40-minute cruise takes you through many of the city’s iconic locations (traffic free) and boasts a fantastic 4-piece jazz band blasting out all the fan favourites. Better yet, guests are invited to join in, and you’ll have your choice of instruments to pick up before jumping aboard!</p>
+      </div>
+      <!-- /s-entry-content -->
+
+    </div>
+    <!-- /o-container -->
+
+  </div>
+  <!-- /c-section -->
+
+
+  <div class="c-section">
+
+    <div class="o-container">
+
+      <h2 class="c-title u-vertical-space">The Kaiyukan Aquarium</h2>
+      <!-- /c-title -->
+
+
+      <div class="c-columns u-vertical-space">
+        <div class="c-columns__list">
+          <div class="c-columns__item">
+
+            <div class="s-entry-content">
+              <p>Located in Tempozan Harbor Village, the Kaiyukan Aquarium is the second largest public aquarium in the world. Featuring over 30,000 creatures in 15 different exhibits, its undisputed star attraction is Yuna, the whale shark, and her 4-story Pacific Ocean tank.</p>
+              <p>Just next door, too, you’ll find the Tempozan Ferris Wheel, whose 112.5-meter-high aspect offers up one of the best views in all of Osaka.</p>
+            </div>
+            <!-- /s-entry-content -->
+
+          </div>
+          <div class="c-columns__item c-columns__item--third">
+
+            <img src="https://placehold.it/960" alt="">
+
+          </div>
+        </div>
+      </div>
+      <!-- /c-columns -->
+
+    </div>
+    <!-- /o-container -->
+
+  </div>
+  <!-- /c-section -->
+
+
+  <div class="c-section">
+
+    <div class="o-container">
+
+      <h2 class="c-title u-vertical-space">Tenjinbashisuji Shotengai</h2>
+      <!-- /c-title -->
+
+
+      <div class="c-columns u-vertical-space">
+        <div class="c-columns__list">
+          <div class="c-columns__item">
+
+            <div class="s-entry-content">
+              <p>The name ‘Osaka’ literally means ‘large hill’, which is ironic given the city is actually one of the flattest places in the world. That makes it ideal for exploring on foot, however, and there’s no more iconic walk in town than the 2.6km shotengai (‘shopping street’) known as Tenjinbashisuji Shotengai.</p>
+              <p>Boasting over 600 shops and restaurants, to walk Tenjinbashisuji Shotengai is to feel almost like Alice, tumbling down a never-ending tunnel of wonder. It also takes you through the famous Dotonbori district - a vibrant and brightly-lit social area that features the famous ‘Glico Sign’: a huge billboard by one of Japan's top snack manufacturers whose 140,000 LED lights change patterns every 30 minutes from sunset thru to midnight.</p>
+            </div>
+            <!-- /s-entry-content -->
+
+          </div>
+          <div class="c-columns__item c-columns__item--third">
+
+            <img src="https://placehold.it/960" alt="">
+
+          </div>
+        </div>
+      </div>
+      <!-- /c-columns -->
+
+    </div>
+    <!-- /o-container -->
+
+  </div>
+  <!-- /c-section -->
+
+
+  <div class="c-section">
+
+    <div class="o-container">
+
+      <h2 class="c-title u-vertical-space">Traditional Osaka: <br>shrines, temples and towns oh my!</h2>
+      <!-- /c-title -->
+
+
+      <div class="s-entry-content u-vertical-space">
+        <p>Osaka was, until the 17th century, both the political and cultural centre of Japan, meaning it possesses some of the oldest and most striking historical sites in the country. The city’s inhabitants proudly maintain these sites with such care and dedication that to walk through them is to walk back hundreds or even thousands of years.</p>
+      </div>
+      <!-- /s-entry-content -->
+
+
+      <div class="c-content-block c-content-block--seamist u-vertical-space">
+
+        <div class="c-columns u-vertical-space">
+          <div class="c-columns__list c-columns__list--middle">
+            <div class="c-columns__item">
+
+              <img src="https://placehold.it/960" alt="">
+
+            </div>
+            <div class="c-columns__item">
+
+              <div class="s-entry-content u-vertical-space">
+                <h3>Sumiyoshi-taisha Shrine</h3>
+                <p>Founded in the year 211, Sumiyoshi-taisha is one of the oldest shrines in Japan and enshrines three kami, or gods, said to protect travellers, fishermen and sailors. Famed for its striking red Sorihashi Bridge (a photo favourite with visitors), the shrine’s architecture predates Chinese influence, making it 100% authentically Japanese.</p>
+              </div>
+              <!-- /s-entry-content -->
+
+            </div>
+          </div>
+        </div>
+        <!-- /c-columns -->
+
+
+        <div class="c-columns u-vertical-space">
+          <div class="c-columns__list c-columns__list--middle">
+            <div class="c-columns__item">
+
+              <img src="https://placehold.it/960" alt="">
+
+            </div>
+            <div class="c-columns__item">
+
+              <div class="s-entry-content u-vertical-space">
+                <h3>Hozenji Temple</h3>
+                <p>Situated right in the heart of the bustling Namba, Hozenji is one of the smallest and most unusual temples in all of Japan, and features the famous ‘mossy Buddha’ - a consequence of constant water splashed over it by its worshippers.</p>
+              </div>
+              <!-- /s-entry-content -->
+
+            </div>
+          </div>
+        </div>
+        <!-- /c-columns -->
+
+
+        <div class="c-columns u-vertical-space">
+          <div class="c-columns__list c-columns__list--middle">
+            <div class="c-columns__item">
+
+              <img src="https://placehold.it/960" alt="">
+
+            </div>
+            <div class="c-columns__item">
+
+              <div class="s-entry-content u-vertical-space">
+                <h3>Shitennoji​ (First Buddhist Temple in Japan)</h3>
+                <p>Constructed in 593 A.D, Shitennoji is considered the first Buddhist temple in Japan. A favourite for both tourists and locals, it’s best to visit on the 14th of any month in order to catch Osaka’s largest flea market nearby.</p>
+              </div>
+              <!-- /s-entry-content -->
+
+            </div>
+          </div>
+        </div>
+        <!-- /c-columns -->
+
+
+        <div class="c-columns u-vertical-space">
+          <div class="c-columns__list c-columns__list--middle">
+            <div class="c-columns__item">
+
+              <img src="https://placehold.it/960" alt="">
+
+            </div>
+            <div class="c-columns__item">
+
+              <div class="s-entry-content u-vertical-space">
+                <h3>Isshinji Temple</h3>
+                <p>Isshinji’s mausoleum houses twelve Buddha statues made entirely of human bones. Yep...human bones. It took the bones of 50,000 bodies to assemble the first Buddha back in in 1887 and the practice continues to this day.</p>
+              </div>
+              <!-- /s-entry-content -->
+
+            </div>
+          </div>
+        </div>
+        <!-- /c-columns -->
+
+      </div>
+      <!-- /c-content-block -->
+
+    </div>
+    <!-- /o-container -->
+
+  </div>
+  <!-- /c-section -->
+
+
+  <div class="c-section">
+
+    <div class="o-container">
+
+      <h2 class="c-title u-vertical-space">Osaka castle</h2>
+      <!-- /c-title -->
+
+
+      <div class="u-vertical-space">
+        <img src="{{ cdn }}images/osaka-castle.jpg" alt="">
+      </div>
+      <!-- /u-vertical-space -->
+
+
+      <div class="s-entry-content u-vertical-space">
+        <p>Known as ‘the symbol of Osaka’, this castle is a wonder to visit all year round, but at night it’s at its most enthralling - with floodlights creating the impression that the castle is floating on air. Osaka Castle was originally constructed in the late 1500s by Toyotomi Hideyoshi - an infamous warlord famed for uniting all of Japan’s provinces under his one rule. Centuries of war and natural disasters have seen the castle levelled and rebuilt several times over the year, but it still retains its original majesty and mystery. Inside you’ll find a museum, and a higher observation deck boasts 360-degree views, whilst the surrounding gardens offer unrivalled plum orchards in winter and magnificent ume flowers in the spring.</p>
+      </div>
+      <!-- /s-entry-content -->
+
+    </div>
+    <!-- /o-container -->
+
+  </div>
+  <!-- /c-section -->
+
+
+  <div class="c-section">
+
+    <div class="o-container">
+
+      <h2 class="c-title u-vertical-space">Architecture</h2>
+      <!-- /c-title -->
+
+
+      <div class="s-entry-content u-vertical-space">
+        <p>Osaka might have the reputation for being a ‘concrete jungle’, but it also boasts some of the most striking traditional and contemporary architecture in the country. Ancient shrines sit seamlessly alongside thriving commercial gateways, making the act of exploring as unexpected as it is rewarding.</p>
+      </div>
+      <!-- /s-entry-content -->
+
+
+      {% set carousel = [
+        {
+          imageURL: 'images/osaka-cityscape.jpg',
+          title: 'Abeno Harukas',
+          description: 'Standing at 300m, this Cesar Pelli–designed tower is Japan’s tallest building. Inside you’ll find Kintetsu (Japan’s largest department store), along with an Art Museum and a free observatory on the 16th floor. It’s worth paying to get up to the top-floor Harukas 300 observation deck, however, since its open-air atrium and 360-degree views show off the entire region of Kansai.'
+        },
+        {
+          imageURL: 'images/osaka-maritime-museum.jpg',
+          title: 'The Osaka Maritime Museum',
+          description: 'The Osaka Maritime Museum was opened in 2000, and won numerous design awards for both its astounding aesthetic and its ability to withstand seismic, wave, and extreme winds.'
+        },
+        {
+          imageURL: 'images/umeda-sky-building.jpg',
+          title: 'City of Air',
+          description: '1980’s Japan was an era of extraordinary architectural experimentalism, and Osaka’s leaders led the charge by envisaging a "City of Air" comprising four giant, interconnected towers. Ultimately just two were built - the Umeda Sky Building - whose rooftop plays host to the famous ‘floating garden’ observatory: a must-see venue for visitors given it’s suspended between the two towers.'
+        },
+        {
+          imageURL: 'images/national-museum-of-art-osaka.jpg',
+          title: 'National Museum of Art Osaka',
+          description: 'While its dramatic above-ground feature stops most passers-by in their tracks, the underground museum itself is the real show-stopper, featuring a wide and impressive collection of Japanese, Asian, European and American contemporary art.'
+        }
+      ] %}
+
+
+      {% include "components/carousel.njk" %}
+
+    </div>
+    <!-- /o-container -->
+
+  </div>
+  <!-- /c-section -->
+
+
+  {% include "components/qantas.njk" %}
+
+</main>
 <!-- /main -->
 {% endblock %}

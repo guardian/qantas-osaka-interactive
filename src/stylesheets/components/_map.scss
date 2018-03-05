@@ -4,15 +4,15 @@
   }
 }
 
-.c-map__column {}
+.c-map__column {
+  @media (min-width: 64em) {
+    flex: auto;
+  }
+}
 
 .c-map__column--legend {
   @include fluid-type(padding, 20em, 48em, 1em, 2em);
   background-color: $concrete;
-
-  @media (min-width: 64em) {
-    flex: auto;
-  }
 }
 
 .c-map__column--image {
@@ -73,7 +73,7 @@
 // Image -------------------------------
 
 .c-map-image {
-  background-image: url(/images/map.png);
+  background-image: url(/images/map-1.png);
   background-size: cover;
   counter-reset: map-image;
   overflow: hidden;
@@ -134,7 +134,7 @@
 }
 
 @for $i from 0 through 6 {
-  .c-map[data-mapitem="#{$i}"] .c-map-image__item:nth-child(#{$i + 1}) {
+  .c-map[data-map-item="#{$i}"] .c-map-image__item:nth-child(#{$i + 1}) {
     animation: 0.125s ease-in-out infinite alternate wiggle;
   }
 }
@@ -142,6 +142,7 @@
 .c-map-image__image {
   display: block;
   margin-bottom: 0.5em;
+  width: 100%;
 }
 
 .c-map-image__label {

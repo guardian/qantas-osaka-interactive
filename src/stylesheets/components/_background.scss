@@ -18,14 +18,6 @@
   }
 }
 
-.c-background--call-to-action::after {
-  background-color: rgba($roman, 0.85);
-}
-
-.c-background--header::after {
-  background-image: linear-gradient(rgba($black, 0),rgba($black, 0.75));
-}
-
 @keyframes scale {
   100% {
     transform: scale(1.125);

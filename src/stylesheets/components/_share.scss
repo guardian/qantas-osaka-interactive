@@ -1,12 +1,11 @@
 .c-share {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
 .c-share__label {
-  line-height: 1;
-  margin-bottom: 0.5em;
+  margin-right: 1em;
 }
 
 .c-share-menu {

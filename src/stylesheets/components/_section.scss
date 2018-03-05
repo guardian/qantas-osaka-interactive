@@ -1,23 +1,8 @@
-.c-section {}
-
-.c-section--background {
-  color: $white;
-  position: relative;
-  z-index: 0;
-}
-
-.c-section--margin {
+.c-section {
   @include fluid-type(margin-bottom margin-top, 20em, 48em, 2em, 4em);
 }
 
-.c-section--padding {
-  @include fluid-type(padding-bottom padding-top, 20em, 48em, 2em, 4em);
-}
-
-
-// Background --------------------------
-
-.c-main .c-section {
+&.t-food .c-main .c-section {
   background-repeat: no-repeat;
 
   &:nth-child(1) {

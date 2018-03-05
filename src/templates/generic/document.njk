@@ -1,3 +1,4 @@
+{% if not cdn %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,10 +8,13 @@
     <link rel="stylesheet" href="stylesheets/index.css">
   </head>
   <body>
-    <div class="o-body-wrap">
+{% endif %}
+    <div class="o-body-wrap s-interactive {{ theme }}">
       {% block regions %}{% endblock %}
     </div>
     <!-- /o-body-wrap -->
+{% if not cdn %}
     <script src="scripts/index.js"></script>
   </body>
 </html>
+{% endif %}

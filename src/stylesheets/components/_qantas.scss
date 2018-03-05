@@ -1,0 +1,26 @@
+.c-qantas {
+  @include fluid-type(margin-top, 20em, 48em, 4em, 8em);
+  @include fluid-type(padding-bottom padding-top, 20em, 48em, 2em, 4em);
+  color: $white;
+  position: relative;
+  z-index: 0;
+}
+
+.c-qantas__background::after {
+  background-color: rgba($roman, 0.85);
+}
+
+.c-qantas__title {
+  color: inherit;
+  font-family: "TS3 Text Sans", sans-serif;
+}
+
+.c-qantas__entry-content {
+  max-width: 768px;
+}
+
+.c-qantas__button {
+  background-color: $white;
+  box-shadow: inset 0 0 0 0.125em $white;
+  color: $lifeguard;
+}

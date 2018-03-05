@@ -1,11 +1,13 @@
 .c-carousel {}
 
-.c-carousel__item {
-  width: 100%;
+.c-carousel__item {}
+
+.c-carousel:not(.flickity-enabled) .c-carousel__item:not(:last-child) {
+  margin-bottom: 2em;
 }
 
 .c-carousel__cover {
-  padding-top: 66.6666666667%;
+  padding-top: percentage(2/3);
   position: relative;
 
   @media (min-width: 48em) {
@@ -23,20 +25,26 @@
 }
 
 .c-carousel__caption {
-  @include fluid-type(padding, 20em, 48em, 1rem, 2rem);
+  @include fluid-type(padding, 20em, 48em, 1em, 2em);
   background-color: $concrete;
-  font-size: 0.875em;
+}
+
+.flickity-enabled .c-carousel__caption {
   position: relative;
 
   &::after {
+    background-color: $concrete;
     content: "";
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 100%;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background-color: inherit;
   }
+}
+
+.c-carousel__entry-content {
+  font-size: 0.875em;
 }
 
 
@@ -47,19 +55,39 @@
 }
 
 .flickity-viewport {
-  cursor: grab;
+  height: 100%;
   overflow: hidden;
   position: relative;
-
-  &.is-pointer-down {
-    cursor: grabbing;
-  }
 }
 
 .flickity-slider {
+  height: 100%;
   position: absolute;
   width: 100%;
 }
+
+.flickity-enabled .c-carousel__item {
+  width: 100%;
+}
+
+
+// Draggable ---------------------------
+
+.flickity-enabled.is-draggable {
+  tap-highlight-color: transparent;
+  user-select: none;
+
+  .flickity-viewport {
+    cursor: grab;
+
+    &.is-pointer-down {
+      cursor: grabbing;
+    }
+  }
+}
+
+
+// Previous/next buttons ---------------
 
 .flickity-prev-next-button {
   @extend %u-transition;
@@ -70,13 +98,13 @@
   cursor: pointer;
   font-size: inherit;
   line-height: 1;
-  margin-top: 33.3333333334%;
+  margin-top: percentage(1/3);
   padding: 1em;
   position: absolute;
   top: 0;
   transform: translatey(-50%);
 
-  @media (max-width: 47.9375em) {
+  @media (max-width: 37.4375em) {
     display: none;
   }
 
@@ -106,11 +134,14 @@
   }
 }
 
+
+// Page dots ---------------------------
+
 .flickity-page-dots {
   display: flex;
   justify-content: center;
   left: 0;
-  margin-top: 66.6666666667%;
+  margin-top: percentage(2/3);
   padding-bottom: 1em;
   position: absolute;
   top: 0;

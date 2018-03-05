@@ -1,10 +1,6 @@
 .s-entry-content {
-  line-height: 1.75;
-
-  h3,
   p {
-    margin-bottom: 1.5em;
-    margin-top: 1.5em;
+    margin: 1.5em 0;
 
     &:first-child {
       margin-top: 0;
@@ -16,23 +12,12 @@
   }
 
   h3 + p {
-    margin-top: -1.5em;
+    margin-top: 0;
   }
 }
 
-.s-entry-content--large {
-  font-size: 1.25em;
-}
-
-.s-entry-content--lead {
+.s-entry-content--highlight {
   color: $lifeguard;
+  font-size: 1.125em;
   font-style: italic;
-}
-
-.s-entry-content--narrow {
-  max-width: 768px;
-}
-
-.s-entry-content--serif {
-  font-family: "GH Guardian Headline", serif;
 }

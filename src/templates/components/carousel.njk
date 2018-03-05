@@ -1,0 +1,16 @@
+<div class="c-carousel u-vertical-space js-carousel">
+  {% for item in carousel %}
+  <div class="c-carousel__item">
+    <div class="c-carousel__cover">
+      <img class="c-carousel__image" src="{{ cdn }}{{ item.imageURL }}" alt="">
+    </div>
+    <div class="c-carousel__caption">
+      <div class="s-entry-content c-carousel__entry-content">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<!-- /c-carousel -->

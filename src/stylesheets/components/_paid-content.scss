@@ -1,4 +1,4 @@
-.c-paid-for-by {
+.c-paid-content {
   text-align: center;
 
   @media (min-width: 48em) {
@@ -8,14 +8,15 @@
   }
 }
 
-.c-paid-for-by__label {
+.c-paid-content__label {
+  display: block;
   font-size: 0.625em;
 }
 
-.c-paid-for-by__link {
+.c-paid-content__link {
   display: block;
 }
 
-.c-paid-for-by__image {
+.c-paid-content__image {
   width: 7em;
 }

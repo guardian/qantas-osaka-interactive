@@ -2,18 +2,15 @@
   background-color: $tundora;
   color: $white;
   flex: none;
-  padding-bottom: 2em;
-  padding-top: 2em;
+  padding: 2em 0;
+
+  @media (min-width: 48em) {
+    padding-bottom: 0;
+  }
 }
 
 .c-footer__container {
   @media (min-width: 48em) {
     position: relative;
-  }
-}
-
-.c-footer__share {
-  @media (min-width: 48em) {
-    margin-bottom: 0 !important;
   }
 }

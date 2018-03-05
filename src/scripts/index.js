@@ -1,20 +1,24 @@
 function carousel() {
-  var flkty = new Flickity('.js-carousel');
-};
+  var carousel = document.querySelector('.js-carousel');
+
+  if (document.body.contains(carousel)) {
+    var flkty = new Flickity(carousel);
+  }
+}
 
 
-function interactiveMap() {
-  var elements = Array.prototype.slice.call(document.getElementsByClassName('js-interactiveMap'));
+function map() {
+  var mapLegendItems = Array.prototype.slice.call(document.querySelectorAll('.js-map-legend li'));
 
-  elements.forEach(function(element, index) {
-    element.addEventListener('click', function() {
-      this.closest('.c-map').setAttribute('data-mapitem', index);
+  mapLegendItems.forEach(function(mapLegendItem, index) {
+    mapLegendItem.addEventListener('click', function() {
+      this.closest('.c-map').setAttribute('data-map-item', index);
     });
   });
-};
+}
 
 
-function popupWindow(url) {
+function popup(url) {
   var width = 575;
   var height = 400;
   var multiScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screen.left;
@@ -28,36 +32,35 @@ function popupWindow(url) {
   ].join(',');
 
   window.open(url, '_blank', options);
-};
+}
 
 
-function sharingLinks() {
-  var elements = Array.prototype.slice.call(document.getElementsByClassName('js-sharingLinks'));
+function share() {
+  var shareLinks = Array.prototype.slice.call(document.querySelectorAll('.js-share-menu a'));
 
-  elements.forEach(function(element) {
-    element.addEventListener('click', function(event) {
+  shareLinks.forEach(function(shareLink) {
+    shareLink.addEventListener('click', function(event) {
       event.preventDefault();
-      popupWindow(element.href);
+      popup(shareLink.href);
     });
   });
-};
+}
 
 
-function viewportMonitor() {
-  var elements = Array.prototype.slice.call(document.getElementsByClassName('js-viewportMonitor'));
+function viewport() {
+  var elements = Array.prototype.slice.call(document.getElementsByClassName('js-viewport'));
 
   elements.forEach(function(element) {
     new WhenInViewport(element, function(elementInViewport) {
       elementInViewport.classList.add('in-viewport');
     });
   });
-};
+}
 
 
 document.addEventListener('DOMContentLoaded', function() {
   carousel();
-  interactiveMap();
-  sharingLinks();
-  svg4everybody();
-  viewportMonitor();
+  map();
+  share();
+  viewport();
 });

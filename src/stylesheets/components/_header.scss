@@ -1,4 +1,21 @@
 .c-header {
+  @include fluid-type(padding-bottom, 20em, 48em, 2em, 4em);
   @include fluid-type(padding-top, 20em, 48em, 8em, 16em);
+  color: $white;
   flex: none;
+  position: relative;
+  z-index: 0;
+}
+
+.c-header__background::after {
+  background-image: linear-gradient(rgba($black, 0), rgba($black, 0.75));
+}
+
+.c-header__title {
+  @include fluid-type(font-size, 20em, 48em, 1.5em, 3em);
+}
+
+.c-header__entry-content {
+  font-family: "GH Guardian Headline", serif;
+  font-size: 1.25em;
 }

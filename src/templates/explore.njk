@@ -1,6 +1,51 @@
+{% set theme = "t-explore" %}
 {% set title = "" %}
 {% extends "generic/regions.njk" %}
+{% block header %}
+<header class="c-header">
+
+  <div class="c-background c-header__background">
+    <img class="c-background__image" src="{{ cdn }}" alt="">
+  </div>
+  <!-- /c-background -->
+
+
+  <div class="o-container">
+
+    <h1 class="c-title c-header__title u-vertical-space">{{ title }}</h1>
+    <!-- c-title -->
+
+
+    <div class="s-entry-content c-header__entry-content u-vertical-space">
+      <p></p>
+    </div>
+    <!-- /s-entry-content -->
+
+  </div>
+  <!-- /o-container -->
+
+</header>
+<!-- /header -->
+{% endblock %}
 {% block main %}
-<main class="c-main"></main>
+<main class="c-main">
+
+  <div class="c-section">
+
+    <div class="o-container">
+
+      <h2 class="c-title u-vertical-space"></h2>
+      <!-- /c-title -->
+
+    </div>
+    <!-- /o-container -->
+
+  </div>
+  <!-- /c-section -->
+
+
+  {% include "components/qantas.njk" %}
+
+</main>
 <!-- /main -->
 {% endblock %}

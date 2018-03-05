@@ -10,11 +10,14 @@ const plumber = require('gulp-plumber')
 const rename = require('gulp-rename')
 const runSequence = require('run-sequence')
 const sass = require('gulp-sass')
+const sassVars = require('gulp-sass-vars')
 const sourcemaps = require('gulp-sourcemaps')
 const surge = require('gulp-surge')
 const svgo = require('gulp-svgo')
 const svgstore = require('gulp-svgstore')
 const uglify = require('gulp-uglify')
+
+const cdn = null
 
 gulp.task('browser-sync', () =>
   browserSync.init({
@@ -86,6 +89,9 @@ gulp.task('stage', callback =>
 gulp.task('stylesheets', () =>
   gulp.src('src/stylesheets/*.scss')
     .pipe(plumber())
+    .pipe(sassVars({
+      cdn: cdn
+    }))
     .pipe(sourcemaps.init())
       .pipe(sass({
         outputStyle: 'compressed',
@@ -109,7 +115,9 @@ gulp.task('surge', () =>
 gulp.task('templates', () =>
   gulp.src('src/templates/*.njk')
     .pipe(plumber())
-    .pipe(nunjucks.compile())
+    .pipe(nunjucks.compile({
+      cdn: cdn
+    }))
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true
