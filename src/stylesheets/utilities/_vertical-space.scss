@@ -1,6 +1,5 @@
 .u-vertical-space {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  @include fluid-type(margin-bottom margin-top, 20em, 48em, 1rem, 2rem);
 
   &:first-child {
     margin-top: 0;
@@ -11,7 +10,16 @@
   }
 }
 
+.u-vertical-space--small {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
 .u-vertical-space--medium {
   margin-bottom: 2rem;
   margin-top: 2rem;
+}
+
+.u-vertical-space--large {
+  @include fluid-type(margin-bottom margin-top, 20em, 48em, 2rem, 4rem);
 }

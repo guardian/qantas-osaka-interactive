@@ -6,8 +6,14 @@
   z-index: 0;
 }
 
-.c-qantas__background::after {
-  background-color: rgba($roman, 0.85);
+.c-qantas__background {
+  &::after {
+    background-color: rgba($roman, 0.85);
+  }
+
+  .c-background__image {
+    object-position: 50% 100%;
+  }
 }
 
 .c-qantas__title {

@@ -36,7 +36,6 @@
 }
 
 .c-find-a-table__layer {
-  animation: 1s ease 1 forwards paused fly-in;
   position: absolute;
 
   &:nth-child(1) {
@@ -162,7 +161,11 @@
 }
 
 .c-find-a-table.in-viewport .c-find-a-table__layer {
-  animation-play-state: running;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-name: fly-in;
+  animation-timing-function: ease;
 }
 
 .c-find-a-table__image {

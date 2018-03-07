@@ -33,6 +33,7 @@
 
 .c-map-legend__title {
   font-size: 2em;
+  font-weight: bold;
   line-height: 1.125;
 }
 
@@ -73,7 +74,7 @@
 // Image -------------------------------
 
 .c-map-image {
-  background-image: url(/images/map-1.png);
+  background-image: url(#{$cdn}images/map-1.png);
   background-size: cover;
   counter-reset: map-image;
   overflow: hidden;

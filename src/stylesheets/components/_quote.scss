@@ -1,6 +1,6 @@
 .c-quote {
   color: $lifeguard;
-  max-width: 266.66px;
+  max-width: 293.33px;
 }
 
 @keyframes squiggle {
@@ -56,13 +56,28 @@
     display: inline-block;
     text-align: right;
     width: 1em;
+
+    @if $cdn {
+      margin-right: -0.25em;
+    }
   }
 
   &::after {
     content: "”";
+
+    @if $cdn {
+      margin-left: -0.25em;
+    }
   }
 }
 
 .c-quote__definition {
-  margin-top: 0.5em;
+  &:not(:only-child) {
+    margin-top: 0.5em;
+  }
+
+  &:only-child {
+    font-size: 1.125em;
+    font-style: italic;
+  }
 }

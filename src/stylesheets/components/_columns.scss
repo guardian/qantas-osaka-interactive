@@ -1,11 +1,17 @@
 .c-columns {}
 
+.c-columns--medium {}
+
 .c-columns__list {
-  @include fluid-type(margin-left margin-top, 20em, 48em, -2em, -4em);
+  margin: -1em 0 0 -2em;
 
   @media (min-width: 48em) {
     display: flex;
   }
+}
+
+.c-columns--medium .c-columns__list {
+  margin: -2em 0 0 -4em;
 }
 
 .c-columns__list--middle {
@@ -15,22 +21,30 @@
 }
 
 .c-columns__item {
-  @include fluid-type(padding-left padding-top, 20em, 48em, 2em, 4em);
+  padding: 1em 0 0 2em;
 
   @media (min-width: 48em) {
     flex: 1 1 50%;
   }
 }
 
-.c-columns__item--quarter {
-  @media (min-width: 48em) {
-    flex: 0 0 25%;
-  }
+.c-columns--medium .c-columns__item {
+  padding: 2em 0 0 4em;
+}
+
+.c-columns__item--center {
+  text-align: center;
 }
 
 .c-columns__item--right {
   @media (min-width: 48em) {
     margin-left: auto !important;
+  }
+}
+
+.c-columns__item--swap {
+  @media (min-width: 48em) {
+    order: 1;
   }
 }
 

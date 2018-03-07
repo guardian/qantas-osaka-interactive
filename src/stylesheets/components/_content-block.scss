@@ -1,7 +1,17 @@
-.c-content-block {
-  @include fluid-type(padding, 20em, 48em, 2em, 4em);
-}
+.c-content-block {}
 
 .c-content-block--seamist {
+  @include fluid-type(padding, 20em, 48em, 1.5em, 4em);
   background-color: $seamist;
+}
+
+.c-content-block--white {
+  @include fluid-type(padding, 20em, 48em, 1.5em, 2em);
+  border-radius: 0.5em;
+  border: $lifeguard solid 1px;
+}
+
+.c-content-block__title {
+  font-family: "TS3 Text Sans", sans-serif;
+  font-size: 1.25em;
 }

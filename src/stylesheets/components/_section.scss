@@ -2,26 +2,45 @@
   @include fluid-type(margin-bottom margin-top, 20em, 48em, 2em, 4em);
 }
 
-&.t-food .c-main .c-section {
+.c-main .c-section {
   background-repeat: no-repeat;
+}
 
+&.t-culture .c-main .c-section {
+  &:nth-child(3) {
+    background-image: url(#{$cdn}images/background-2.png);
+    background-position: 93.75% 0;
+  }
+
+  &:nth-child(4) {
+    background-image: url(#{$cdn}images/background-5.png);
+    background-position: 6.25% 37.5%;
+  }
+
+  &:nth-child(7) {
+    background-image: url(#{$cdn}images/background-1.png), url(#{$cdn}images/background-2.png);
+    background-position: 93.75% 6.25%, 6.25% 87.5%;
+  }
+}
+
+&.t-food .c-main .c-section {
   &:nth-child(1) {
-    background-image: url(/images/background-1.png);
+    background-image: url(#{$cdn}images/background-1.png);
     background-position: 12.5% 100%;
   }
 
   &:nth-child(2) {
-    background-image: url(/images/background-2.png);
+    background-image: url(#{$cdn}images/background-2.png);
     background-position: 87.5% 100%;
   }
 
   &:nth-child(3) {
-    background-image: url(/images/background-3.png), url(/images/background-4.png);
+    background-image: url(#{$cdn}images/background-3.png), url(#{$cdn}images/background-4.png);
     background-position: 6.25% 100%, 93.75% 50%;
   }
 
   &:nth-child(6) {
-    background-image: url(/images/background-5.png), url(/images/background-6.png);
+    background-image: url(#{$cdn}images/background-5.png), url(#{$cdn}images/background-6.png);
     background-position: 6.25% 0, 93.75% 100%;
   }
 

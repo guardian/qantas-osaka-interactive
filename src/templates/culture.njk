@@ -1,5 +1,6 @@
 {% set theme = "t-culture" %}
 {% set title = "A cultural guide to Osaka" %}
+{% set liveURL = "" %}
 {% extends "generic/regions.njk" %}
 {% block header %}
 <header class="c-header">
@@ -12,11 +13,11 @@
 
   <div class="o-container">
 
-    <h1 class="c-title c-header__title u-vertical-space">{{ title }}</h1>
+    <h1 class="c-title c-header__title u-vertical-space u-vertical-space--small">{{ title }}</h1>
     <!-- c-title -->
 
 
-    <div class="s-entry-content c-header__entry-content u-vertical-space">
+    <div class="s-entry-content c-header__entry-content u-vertical-space u-vertical-space--small">
       <p>Osaka is a city with over 1500 years of history and tradition, yet we’re now only beginning to discover all that it has to offer.</p>
     </div>
     <!-- /s-entry-content -->
@@ -34,20 +35,20 @@
 
     <div class="o-container">
 
-      <div class="c-columns u-vertical-space">
+      <div class="c-columns c-columns--medium u-vertical-space">
         <div class="c-columns__list">
           <div class="c-columns__item c-columns__item--third">
 
-            <div class="s-entry-content s-entry-content--highlight">
-              <p>In just the past five years tourism has absolutely exploded in the Osaka and surrounding Kansai region, jumping by a whopping 363% - more than double that of anywhere else in the country.</p>
+            <div class="c-quote c-quote--border-bottom">
+              <p class="c-quote__definition">In just the past five years tourism has absolutely exploded in the Osaka and surrounding Kansai region, jumping by a whopping 363% - more than double that of anywhere else in the country.</p>
             </div>
-            <!-- /s-entry-content -->
+            <!-- /c-quote -->
 
           </div>
           <div class="c-columns__item">
 
             <div class="s-entry-content">
-              <p>Renowned for its stunning architecture and rich cultural heritage (as well as offering a far more price-friendly alternative to Tokyo), there’s never been a better time to take advantage of Qantas’ direct flights from Australia and explore all the wonders of the place the Japanese call ‘tenka no daidokoro’ (‘the kitchen under the heavens’).</p>
+              <p><strong>Renowned for its stunning architecture</strong> and rich cultural heritage (as well as offering a far more price-friendly alternative to Tokyo), there’s never been a better time to take advantage of Qantas’ direct flights from Australia and explore all the wonders of the place the Japanese call ‘tenka no daidokoro’ (‘the kitchen under the heavens’).</p>
             </div>
             <!-- /s-entry-content -->
 
@@ -69,6 +70,12 @@
 
       <h2 class="c-title u-vertical-space">Osaka prefecture: by the numbers</h2>
       <!-- /c-title -->
+
+
+      <div class="u-vertical-space">
+        <img src="{{ cdn }}images/prefecture.svg" alt="">
+      </div>
+      <!-- /u-vertical-space -->
 
     </div>
     <!-- /o-container -->
@@ -95,7 +102,7 @@
           <div class="c-columns__item">
 
             <div class="s-entry-content">
-              <p>Osaka’s population changes depending on what time of day it is! Whilst the sun’s up, it’s the second largest city in Japan after Tokyo, but by night - when many of its workers leave the city and head home - it becomes the third largest city, pipped to the silver medal by Yokohama.</p>
+              <p><strong>Osaka’s population changes</strong> depending on what time of day it is! Whilst the sun’s up, it’s the second largest city in Japan after Tokyo, but by night - when many of its workers leave the city and head home - it becomes the third largest city, pipped to the silver medal by Yokohama.</p>
             </div>
             <!-- /s-entry-content -->
 
@@ -120,15 +127,49 @@
 
 
       <div class="u-vertical-space">
-        <img src="{{ cdn }}https://placehold.it/960x640" alt="">
+        <img src="{{ cdn }}images/2014-international-jazz-day.jpg" alt="">
       </div>
       <!-- /u-vertical-space -->
 
 
       <div class="s-entry-content u-vertical-space">
-        <p>Osaka is the birthplace of Jazz in Japan, and there’s no better way to take in the sights and a cover of ‘On The Sunny Side of the Street’ than to hop aboard the Tombori River Jazz Boat. This 40-minute cruise takes you through many of the city’s iconic locations (traffic free) and boasts a fantastic 4-piece jazz band blasting out all the fan favourites. Better yet, guests are invited to join in, and you’ll have your choice of instruments to pick up before jumping aboard!</p>
+        <p><strong>Osaka is the birthplace of Jazz in Japan,</strong> and there’s no better way to take in the sights and a cover of ‘On The Sunny Side of the Street’ than to hop aboard the Tombori River Jazz Boat. This 40-minute cruise takes you through many of the city’s iconic locations (traffic free) and boasts a fantastic 4-piece jazz band blasting out all the fan favourites. Better yet, guests are invited to join in, and you’ll have your choice of instruments to pick up before jumping aboard!</p>
       </div>
       <!-- /s-entry-content -->
+
+
+      <div class="c-content-block c-content-block--white u-vertical-space">
+
+        <h3 class="c-title c-content-block__title u-vertical-space u-vertical-space--small">Jazz for the landlubbers</h3>
+        <!-- /c-title -->
+
+
+        <div class="c-columns u-vertical-space u-vertical-space--small">
+          <div class="c-columns__list">
+            <div class="c-columns__item">
+
+              <div class="s-entry-content">
+                <p><strong>Comodo​:</strong> Boasts a great whiskey selection and an even better jazz line-up, including a free bossa nova night every Tuesday.</p>
+                <p><strong>Bunk Johnson​:</strong> Named after the iconic New Orleans trumpeter, jazz fans will love this tiny jazz and whiskey institution in the heart of the city.</p>
+                <p><strong>Azul​:</strong> This recently renovated terrace bar offers an enticing menu, cozy decor and two killer jazz sets every Wednesday thru Friday night from 7pm onwards.</p>
+              </div>
+              <!-- /s-entry-content -->
+
+            </div>
+            <div class="c-columns__item">
+
+              <div class="s-entry-content">
+                <p><strong>Long Walk Coffee​:</strong> For those fancying some daytime jazz, check out this fantastic cafe just a few minutes’ walk from Minami-Moromachi station. Old time records are your soundtrack to some amazing home-made food and delicious coffee custom-brewed to your liking, be it mild and smooth or strong and bitter.</p>
+              </div>
+              <!-- /s-entry-content -->
+
+            </div>
+          </div>
+        </div>
+        <!-- /c-columns -->
+
+      </div>
+      <!-- /c-content-block -->
 
     </div>
     <!-- /o-container -->
@@ -156,9 +197,9 @@
             <!-- /s-entry-content -->
 
           </div>
-          <div class="c-columns__item c-columns__item--third">
+          <div class="c-columns__item c-columns__item--center c-columns__item--third">
 
-            <img src="https://placehold.it/960" alt="">
+            <img src="{{ cdn }}images/kaiyukan-aquarium.png" alt="">
 
           </div>
         </div>
@@ -191,9 +232,9 @@
             <!-- /s-entry-content -->
 
           </div>
-          <div class="c-columns__item c-columns__item--third">
+          <div class="c-columns__item c-columns__item--center c-columns__item--third">
 
-            <img src="https://placehold.it/960" alt="">
+            <img src="{{ cdn }}images/glico.jpg" alt="">
 
           </div>
         </div>
@@ -223,18 +264,18 @@
 
       <div class="c-content-block c-content-block--seamist u-vertical-space">
 
-        <div class="c-columns u-vertical-space">
+        <div class="c-columns u-vertical-space u-vertical-space--large">
           <div class="c-columns__list c-columns__list--middle">
-            <div class="c-columns__item">
+            <div class="c-columns__item c-columns__item--center c-columns__item--swap">
 
-              <img src="https://placehold.it/960" alt="">
+              <img src="{{ cdn }}images/isshinji-temple.png" alt="">
 
             </div>
             <div class="c-columns__item">
 
               <div class="s-entry-content u-vertical-space">
-                <h3>Sumiyoshi-taisha Shrine</h3>
-                <p>Founded in the year 211, Sumiyoshi-taisha is one of the oldest shrines in Japan and enshrines three kami, or gods, said to protect travellers, fishermen and sailors. Famed for its striking red Sorihashi Bridge (a photo favourite with visitors), the shrine’s architecture predates Chinese influence, making it 100% authentically Japanese.</p>
+                <h3>Isshinji Temple</h3>
+                <p>Isshinji’s mausoleum houses twelve Buddha statues made entirely of human bones. Yep...human bones. It took the bones of 50,000 bodies to assemble the first Buddha back in in 1887 and the practice continues to this day.</p>
               </div>
               <!-- /s-entry-content -->
 
@@ -244,11 +285,11 @@
         <!-- /c-columns -->
 
 
-        <div class="c-columns u-vertical-space">
+        <div class="c-columns u-vertical-space u-vertical-space--large">
           <div class="c-columns__list c-columns__list--middle">
-            <div class="c-columns__item">
+            <div class="c-columns__item c-columns__item--center">
 
-              <img src="https://placehold.it/960" alt="">
+              <img src="{{ cdn }}images/hozenji-temple.png" alt="">
 
             </div>
             <div class="c-columns__item">
@@ -265,11 +306,11 @@
         <!-- /c-columns -->
 
 
-        <div class="c-columns u-vertical-space">
+        <div class="c-columns u-vertical-space u-vertical-space--large">
           <div class="c-columns__list c-columns__list--middle">
-            <div class="c-columns__item">
+            <div class="c-columns__item c-columns__item--center c-columns__item--swap">
 
-              <img src="https://placehold.it/960" alt="">
+              <img src="{{ cdn }}images/shitennoji.png" alt="">
 
             </div>
             <div class="c-columns__item">
@@ -286,18 +327,18 @@
         <!-- /c-columns -->
 
 
-        <div class="c-columns u-vertical-space">
+        <div class="c-columns u-vertical-space u-vertical-space--large">
           <div class="c-columns__list c-columns__list--middle">
-            <div class="c-columns__item">
+            <div class="c-columns__item c-columns__item--center">
 
-              <img src="https://placehold.it/960" alt="">
+              <img src="{{ cdn }}images/sumiyoshi-taisha-shrine.png" alt="">
 
             </div>
             <div class="c-columns__item">
 
               <div class="s-entry-content u-vertical-space">
-                <h3>Isshinji Temple</h3>
-                <p>Isshinji’s mausoleum houses twelve Buddha statues made entirely of human bones. Yep...human bones. It took the bones of 50,000 bodies to assemble the first Buddha back in in 1887 and the practice continues to this day.</p>
+                <h3>Sumiyoshi-taisha Shrine</h3>
+                <p>Founded in the year 211, Sumiyoshi-taisha is one of the oldest shrines in Japan and enshrines three kami, or gods, said to protect travellers, fishermen and sailors. Famed for its striking red Sorihashi Bridge (a photo favourite with visitors), the shrine’s architecture predates Chinese influence, making it 100% authentically Japanese.</p>
               </div>
               <!-- /s-entry-content -->
 
@@ -331,7 +372,7 @@
 
 
       <div class="s-entry-content u-vertical-space">
-        <p>Known as ‘the symbol of Osaka’, this castle is a wonder to visit all year round, but at night it’s at its most enthralling - with floodlights creating the impression that the castle is floating on air. Osaka Castle was originally constructed in the late 1500s by Toyotomi Hideyoshi - an infamous warlord famed for uniting all of Japan’s provinces under his one rule. Centuries of war and natural disasters have seen the castle levelled and rebuilt several times over the year, but it still retains its original majesty and mystery. Inside you’ll find a museum, and a higher observation deck boasts 360-degree views, whilst the surrounding gardens offer unrivalled plum orchards in winter and magnificent ume flowers in the spring.</p>
+        <p><strong>Known as ‘the symbol of Osaka’,</strong> this castle is a wonder to visit all year round, but at night it’s at its most enthralling - with floodlights creating the impression that the castle is floating on air. Osaka Castle was originally constructed in the late 1500s by Toyotomi Hideyoshi - an infamous warlord famed for uniting all of Japan’s provinces under his one rule. Centuries of war and natural disasters have seen the castle levelled and rebuilt several times over the year, but it still retains its original majesty and mystery. Inside you’ll find a museum, and a higher observation deck boasts 360-degree views, whilst the surrounding gardens offer unrivalled plum orchards in winter and magnificent ume flowers in the spring.</p>
       </div>
       <!-- /s-entry-content -->
 

@@ -13,6 +13,7 @@
 
 .c-header__title {
   @include fluid-type(font-size, 20em, 48em, 1.5em, 3em);
+  color: $picasso;
 }
 
 .c-header__entry-content {
