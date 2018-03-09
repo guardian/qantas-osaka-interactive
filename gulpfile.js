@@ -1,7 +1,7 @@
 const config = require('./config.json')
 
-const template = 'culture'
-// const template = 'explore'
+// const template = 'culture'
+const template = 'explore'
 // const template = 'food'
 
 const autoprefixer = require('gulp-autoprefixer')
@@ -12,6 +12,7 @@ const file = require('gulp-file')
 const gulp = require('gulp')
 const gulpIf = require('gulp-if')
 const htmlmin = require('gulp-htmlmin')
+const imagemin = require('gulp-imagemin')
 const nunjucks = require('gulp-nunjucks')
 const plumber = require('gulp-plumber')
 const rename = require('gulp-rename')
@@ -71,7 +72,7 @@ gulp.task('build', callback =>
 )
 
 gulp.task('clean', () =>
-  del('dest')
+  del(['.gulp', 'dest'])
 )
 
 gulp.task('build:files', ['images', 'scripts', 'stylesheets', 'templates'])
@@ -84,7 +85,7 @@ gulp.task('deploy', callback =>
 
 gulp.task('images', () =>
   gulp.src('src/images/*')
-    .pipe(gulpIf(process.env.NODE_ENV === 'production', tinypng('hVF5cDJ6l3HWdKS6-Unkd5mb0RUuJcVg')))
+    .pipe(gulpIf(process.env.NODE_ENV === 'production', tinypng('hVF5cDJ6l3HWdKS6-Unkd5mb0RUuJcVg'), imagemin()))
     .pipe(gulp.dest('dest/images'))
     .on('end', browserSync.reload)
 )

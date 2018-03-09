@@ -1,6 +1,6 @@
 {% set theme = "t-culture" %}
 {% set title = "A cultural guide to Osaka" %}
-{% set liveURL = "" %}
+{% set liveURL = "https://www.theguardian.com/qantas-konnichiwa-osaka/ng-interactive/2018/mar/08/a-cultural-guide-to-osaka" %}
 {% extends "generic/regions.njk" %}
 {% block header %}
 <header class="c-header">
@@ -431,6 +431,19 @@
 
 
   {% include "components/qantas.njk" %}
+
+
+  <div class="c-prev-next">
+    <a class="c-prev-next__link" href="https://www.theguardian.com/qantas-konnichiwa-osaka/ng-interactive/2018/mar/06/the-foodies-guide-to-osaka">
+      <img class="c-prev-next__image" src="{{ cdn }}images/ramen-soup.jpg" alt="">
+      <span class="c-prev-next__label">The foodie’s guide to Osaka</span>
+    </a>
+    <a class="c-prev-next__link" href="#">
+      <img class="c-prev-next__image" src="{{ cdn }}images/bamboo-forest.jpg" alt="">
+      <span class="c-prev-next__label">Day trippers guide to Kansai</span>
+    </a>
+  </div>
+  <!-- /c-prev-next -->
 
 </main>
 <!-- /main -->

@@ -1,4 +1,27 @@
 .s-entry-content {
+
+  h3 {}
+
+  p {}
+
+  ul {}
+
+  li {
+    padding-left: 1.5em;
+    position: relative;
+
+    &::before {
+      background-color: currentcolor;
+      border-radius: 50%;
+      content: "";
+      height: 0.5em;
+      left: 0.5em;
+      position: absolute;
+      top: 0.375em;
+      width: 0.5em;
+    }
+  }
+
   p {
     margin-bottom: 1em;
     margin-top: 1em;
@@ -22,3 +45,14 @@
   font-size: 1.125em;
   font-style: italic;
 }
+
+
+
+
+/*
+.s-entry-content {
+  li {
+
+
+}
+*/

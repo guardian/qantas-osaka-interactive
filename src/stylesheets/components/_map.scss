@@ -17,13 +17,20 @@
 
 .c-map__column--image {
   align-items: center;
-  background-color: $atlantis;
   display: flex;
   justify-content: center;
 
   @media (min-width: 64em) {
     flex: 0 0 62.5%;
   }
+}
+
+&.t-food .c-map__column--image {
+  background-color: $atlantis;
+}
+
+&.t-explore .c-map__column--image {
+  background-color: $fern;
 }
 
 
@@ -41,6 +48,11 @@
   font-weight: bold;
   line-height: 1.125;
   margin-bottom: 1em;
+}
+
+.c-map-legend__title .c-map-legend__subtitle {
+  display: block;
+  font-size: 0.5em;
 }
 
 .c-map-legend__list {
@@ -74,18 +86,29 @@
 // Image -------------------------------
 
 .c-map-image {
-  background-image: url(#{$cdn}images/map-1.png);
   background-size: cover;
   counter-reset: map-image;
   overflow: hidden;
-  padding-top: 100%;
   position: relative;
   width: 100%;
+}
+
+&.t-food .c-map-image {
+  background-image: url(#{$cdn}images/map-osaka-1.png);
+  padding-top: 100%;
+}
+
+&.t-explore .c-map-image {
+  background-image: url(#{$cdn}images/map-kansai-1.png);
+  padding-top: 150%;
 }
 
 .c-map-image__item {
   counter-increment: map-image;
   position: absolute;
+}
+
+&.t-food .c-map-image__item {
   width: 25%;
 
   &:nth-child(1) {
@@ -124,6 +147,60 @@
   }
 }
 
+&.t-explore .c-map-image__item {
+  width: 20%;
+
+  &:nth-child(1) {
+    left: 50%;
+    top: 75%;
+  }
+
+  &:nth-child(2) {
+    left: 50%;
+    top: 60%;
+  }
+
+  &:nth-child(3) {
+    left: 72.5%;
+    top: 77.5%;
+  }
+
+  &:nth-child(4) {
+    left: 30%;
+    top: 5%;
+  }
+
+  &:nth-child(5) {
+    left: 55%;
+    top: 45%;
+  }
+
+  &:nth-child(6) {
+    left: 70%;
+    top: 7.5%;
+  }
+
+  &:nth-child(7) {
+    left: 7.5%;
+    top: 20%;
+  }
+
+  &:nth-child(8) {
+    left: 30%;
+    top: 30%;
+  }
+
+  &:nth-child(9) {
+    left: 52.5%;
+    top: 30%;
+  }
+
+  &:nth-child(10) {
+    left: 10%;
+    top: 55%;
+  }
+}
+
 @keyframes wiggle {
   0% {
     transform: rotate(-1.25deg);
@@ -134,7 +211,7 @@
   }
 }
 
-@for $i from 0 through 6 {
+@for $i from 0 through 9 {
   .c-map[data-map-item="#{$i}"] .c-map-image__item:nth-child(#{$i + 1}) {
     animation: 0.125s ease-in-out infinite alternate wiggle;
   }
@@ -155,6 +232,7 @@
   font-weight: bold;
   justify-content: center;
   left: 50%;
+  line-height: 1.125;
   position: relative;
   transform: translatex(-50%);
   width: 200%;
@@ -162,6 +240,7 @@
   &::before {
     background-color: $lifeguard;
     content: counter(map-image);
+    line-height: 1.5rem;
     margin-right: 0.5em;
     text-align: center;
     width: 1.5em;

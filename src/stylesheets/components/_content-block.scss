@@ -1,5 +1,11 @@
 .c-content-block {}
 
+.c-content-block--narrow {
+  @media (min-width: 48em) {
+    width: 50%;
+  }
+}
+
 .c-content-block--seamist {
   @include fluid-type(padding, 20em, 48em, 1.5em, 4em);
   background-color: $seamist;

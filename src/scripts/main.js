@@ -2,7 +2,9 @@ function carousel() {
   var carousel = document.querySelector('.js-carousel');
 
   if (document.body.contains(carousel)) {
-    var flkty = new Flickity(carousel);
+    var flkty = new Flickity(carousel, {
+      adaptiveHeight: true
+    });
   }
 }
 

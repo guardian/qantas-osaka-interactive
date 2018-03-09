@@ -6,8 +6,8 @@
     </div>
     <div class="c-carousel__caption">
       <div class="s-entry-content c-carousel__entry-content">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
+        {{ item.title | safe }}
+        {{ item.description | safe }}
       </div>
     </div>
   </div>
