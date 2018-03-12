@@ -98,6 +98,7 @@ gulp.task('public', () =>
 gulp.task('scripts', () =>
   gulp.src([
     'node_modules/flickity/dist/flickity.pkgd.js',
+    'node_modules/object-fit-images/dist/ofi.js',
     'node_modules/what-input/dist/what-input.js',
     'node_modules/when-in-viewport/dist/whenInViewport.js',
     'src/scripts/*.js'

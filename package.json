@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "flickity": "^2.0.10",
+    "object-fit-images": "^3.2.3",
     "what-input": "^5.0.5",
     "when-in-viewport": "^2.0.3"
   },

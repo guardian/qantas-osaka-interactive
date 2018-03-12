@@ -63,6 +63,7 @@ function viewport() {
 document.addEventListener('DOMContentLoaded', function() {
   carousel();
   map();
+  objectFitImages();
   share();
   viewport();
 });
