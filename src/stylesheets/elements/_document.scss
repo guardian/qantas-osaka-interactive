@@ -2,7 +2,6 @@
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
   @include fluid-type(font-size, 20em, 60em, 1em, 1.25em);
-  background-color: $concrete;
   color: $mineshaft;
   font-family: "TS3 Text Sans", sans-serif;
   line-height: 1.5;

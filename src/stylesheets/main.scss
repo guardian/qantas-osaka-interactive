@@ -11,6 +11,7 @@
 
 @if $cdn {
   figure.element {
+    background-color: $concrete;
     margin: 0;
   }
 }
