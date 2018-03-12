@@ -23,6 +23,23 @@
   }
 }
 
+&.t-explore .c-main .c-section {
+  &:nth-child(2) {
+    background-image: url(#{$cdn}images/background-5.png);
+    background-position: 6.25% 75%;
+  }
+
+  &:nth-child(4) {
+    background-image: url(#{$cdn}images/background-1.png);
+    background-position: 93.75% 0%;
+  }
+
+  &:nth-child(5) {
+    background-image: url(#{$cdn}images/background-2.png);
+    background-position: 6.25% 62.5%;
+  }
+}
+
 &.t-food .c-main .c-section {
   &:nth-child(1) {
     background-image: url(#{$cdn}images/background-1.png);
